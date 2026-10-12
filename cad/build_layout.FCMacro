@@ -1,0 +1,166 @@
+from pathlib import Path
+import math, json, traceback, re
+import FreeCAD as App
+import Part
+import MeshPart
+
+ROOT = Path(__file__).resolve().parents[1]
+try:
+    if App.ActiveDocument:
+        App.closeDocument(App.ActiveDocument.Name)
+    doc = App.newDocument('PCB_Vise_Layout')
+    dims = doc.addObject('App::FeaturePython', 'Dimensions')
+    values = {
+        'RodLength': 250, 'RodDiameter': 8, 'RodSpacing': 56,
+        'AxisHeight': 125, 'BoardWidth': 116, 'BoardDepth': 112,
+        'BoardThickness': 1.6, 'RodDrop': 35, 'JawClearance': 0.3,
+        'FootLength': 190, 'FootWidth': 58, 'FootHeight': 16,
+    }
+    for name, value in values.items():
+        dims.addProperty('App::PropertyLength', name, 'Dimensions')
+        setattr(dims, name, value)
+    dims.addProperty('App::PropertyAngle', 'Tilt', 'Dimensions')
+    dims.Tilt = 20
+    dims.addProperty('App::PropertyString', 'Status', 'Notes')
+    dims.Status = 'Layout study. Retention hardware, ballast and print fits still need development.'
+    base = doc.addObject('App::Part', 'Base')
+    rotor = doc.addObject('App::Part', 'RotatingFrame')
+    rotor.Placement = App.Placement(App.Vector(0,0,125), App.Rotation(App.Vector(1,0,0),20))
+    rotor.setExpression('Placement.Base.z', 'Dimensions.AxisHeight')
+    rotor.setExpression('Placement.Rotation.Angle', 'Dimensions.Tilt')
+    final_parts=[]
+    print_parts=[]
+    colors={'base':(0.17,0.24,0.29),'jaw':(0.12,0.56,0.58),'insert':(0.96,0.61,0.23),'steel':(0.70,0.73,0.77),'board':(0.15,0.40,0.24)}
+
+    def dimensional(expr):
+        return re.sub(r'([+-]\s*)(\d+(?:\.\d+)?)', r'\1\2 mm', expr)
+    def prop(obj, key, value):
+        if isinstance(value,str): obj.setExpression(key,dimensional(value))
+        else: setattr(obj,key,value)
+    def position(obj,x,y,z):
+        for axis,val in zip('xyz',(x,y,z)):
+            if isinstance(val,str): obj.setExpression('Placement.Base.'+axis,dimensional(val))
+            else:
+                pl=obj.Placement; setattr(pl.Base,axis,val); obj.Placement=pl
+    def box(name,l,w,h,x,y,z):
+        o=doc.addObject('Part::Box',name)
+        for k,v in zip(('Length','Width','Height'),(l,w,h)): prop(o,k,v)
+        position(o,x,y,z)
+        return o
+    def cyl(name,r,h,x,y,z,axis='z'):
+        o=doc.addObject('Part::Cylinder',name); prop(o,'Radius',r); prop(o,'Height',h)
+        pl=o.Placement; pl.Rotation=App.Rotation(App.Vector(0,0,1),App.Vector({'x':(1,0,0),'y':(0,1,0),'z':(0,0,1)}[axis])); o.Placement=pl
+        position(o,x,y,z)
+        return o
+    def fuse(name,objects):
+        o=doc.addObject('Part::MultiFuse',name); o.Shapes=objects
+        return o
+    def cut(name,body,tools):
+        t=tools[0] if len(tools)==1 else fuse(name+'Tools',tools)
+        o=doc.addObject('Part::Cut',name); o.Base=body;o.Tool=t
+        return o
+    def finish(o,group,color,printed=True):
+        group.addObject(o);o.ViewObject.ShapeColor=colors[color];o.ViewObject.LineColor=(0.08,0.1,0.12)
+        final_parts.append(o)
+        if printed: print_parts.append(o)
+        return o
+
+    for side,x in [('Left',-147),('Right',147)]:
+        foot=box(side+'FootBlank','Dimensions.FootWidth','Dimensions.FootLength','Dimensions.FootHeight',x-29,'-Dimensions.FootLength / 2',4)
+        # Open pockets for removable steel ballast, away from the upright screws.
+        pockets=[box(side+'Ballast'+str(i),46,45,12,x-23,y,10) for i,y in enumerate([-83,38])]
+        holes=[cyl(side+'FootHole'+str(i),2.7,24,x+dx,dy,0) for i,(dx,dy) in enumerate([(-16,-18),(16,-18),(-16,18),(16,18)])]
+        finish(cut(side+'Foot',foot,pockets+holes),base,'base')
+        # Separate upright: flat mounting flange plus web and rounded pivot crown.
+        flange=box(side+'Flange',50,54,8,x-25,-27,20)
+        web=box(side+'Web',14,46,'Dimensions.AxisHeight - 28',x-7,-23,28)
+        crown=cyl(side+'Crown',23,14,x-7,0,'Dimensions.AxisHeight','x')
+        upright=fuse(side+'UprightBlank',[flange,web,crown])
+        holes=[cyl(side+'PivotBore',3.3,20,x-10,0,'Dimensions.AxisHeight','x')]
+        holes += [cyl(side+'FlangeHole'+str(i),2.7,12,x+dx,dy,18) for i,(dx,dy) in enumerate([(-16,-18),(16,-18),(-16,18),(16,18)])]
+        finish(cut(side+'Upright',upright,holes),base,'base')
+        # Two pivot faces and washers, still a friction-lock concept.
+        capx=-130 if side=='Left' else 114
+        cap=box(side+'CarrierBlank',16,78,60,capx,-39,-47)
+        holes=[cyl(side+'GuideSeat'+str(i),'Dimensions.RodDiameter / 2 + 0.15',12,(-126 if side=='Left' else 114),y,'-Dimensions.RodDrop','x') for i,y in enumerate([-28,28])]
+        holes.append(cyl(side+'CarrierPivotHole',3.3,20,capx-2,0,0,'x'))
+        cap=cut(side+'CarrierBored',cap,holes)
+        disk=cyl(side+'LockFace',23,8,(-138 if side=='Left' else 130),0,0,'x')
+        cap=fuse(side+'CarrierWithDisc',[cap,disk])
+        cap=cut(side+'Carrier',cap,[cyl(side+'DiscBore',3.3,10,(-139 if side=='Left' else 129),0,0,'x')])
+        finish(cap,rotor,'jaw')
+        ring=cut(side+'FrictionWasher',cyl(side+'WasherBlank',22,2,(-140 if side=='Left' else 138),0,0,'x'),[cyl(side+'WasherHole',3.3,4,(-141 if side=='Left' else 137),0,0,'x')])
+        finish(ring,rotor,'insert',False)
+        for y in [-76,76]: finish(cyl(side+'RubberFoot'+str(y),10,4,x,y,0),base,'base',False)
+
+    # Split tie bars fit a 220 mm bed. Their final joint is not designed yet.
+    for y in [-24,16]:
+        for side,x in [('Left',-147),('Right',0)]:
+            tie=box(side+'Tie'+str(y),147,8,8,x,y,8)
+            finish(tie,base,'base')
+    for i,y in enumerate([-28,28]):
+        finish(cyl('GuideRod'+str(i),'Dimensions.RodDiameter / 2','Dimensions.RodLength','-Dimensions.RodLength / 2',y,'-Dimensions.RodDrop','x'),rotor,'steel',False)
+
+    # Board-facing inserts define the clear jaw opening. Body geometry stays outside it.
+    for side,face in [('Fixed',-90),('Sliding','Dimensions.BoardWidth - 94')]:
+        if side=='Fixed': bx=-112; ix=-94; cutx=-92
+        else: bx='Dimensions.BoardWidth - 90'; ix='Dimensions.BoardWidth - 94'; cutx='Dimensions.BoardWidth - 96'
+        body=box(side+'JawBlank',18,76,46,bx,-38,-45)
+        bores=[cyl(side+'JawGuide'+str(i),'Dimensions.RodDiameter / 2 + Dimensions.JawClearance / 2',22,(-114 if side=='Fixed' else 'Dimensions.BoardWidth - 92'),y,'-Dimensions.RodDrop','x') for i,y in enumerate([-28,28])]
+        # The captive nuts and coarse lock will be added after travel is checked.
+        body=cut(side+'JawBody',body,bores)
+        finish(body,rotor,'jaw')
+        # This first adapter uses the ESC's existing M3 holes rather than its crowded edges.
+        ax=-94 if side=='Fixed' else 'Dimensions.BoardWidth - 103'
+        holex=-88.5 if side=='Fixed' else 'Dimensions.BoardWidth - 95.5'
+        rail=box(side+'AdapterBlank',13,'Dimensions.BoardDepth + 8',4,ax,'-Dimensions.BoardDepth / 2 - 4',-9)
+        bosses=[cyl(side+'Standoff'+str(i),3.2,4.2,holex,y,-5) for i,y in enumerate(['-Dimensions.BoardDepth / 2 + 3.5','Dimensions.BoardDepth / 2 - 3.5'])]
+        rail=fuse(side+'AdapterWithStandoffs',[rail]+bosses)
+        holes=[cyl(side+'MountHole'+str(i),1.7,12,holex,y,-10) for i,y in enumerate(['-Dimensions.BoardDepth / 2 + 3.5','Dimensions.BoardDepth / 2 - 3.5'])]
+        finish(cut(side+'MountingAdapter',rail,holes),rotor,'insert')
+    board=box('BoardEnvelopeBlank','Dimensions.BoardWidth','Dimensions.BoardDepth','Dimensions.BoardThickness',-92,'-Dimensions.BoardDepth / 2','-Dimensions.BoardThickness / 2')
+    boardholes=[]
+    for x in [-88.5,'Dimensions.BoardWidth - 95.5']:
+        for y in ['-Dimensions.BoardDepth / 2 + 3.5','Dimensions.BoardDepth / 2 - 3.5']:
+            boardholes.append(cyl('BoardMountHole',1.6,5,x,y,-2.5))
+    board=cut('BoardEnvelope',board,boardholes)
+    finish(board,rotor,'board',False)
+    # Nominal pivot bolts and knobs locate the locking hardware.
+    for side,x in [('Left',-174),('Right',125)]:
+        finish(cyl(side+'PivotBolt',3,49,x,0,'Dimensions.AxisHeight','x'),base,'steel',False)
+        knobx=-175 if side=='Left' else 155
+        knob=cut(side+'LockKnob',cyl(side+'KnobBlank',20,18,knobx,0,'Dimensions.AxisHeight','x'),[cyl(side+'KnobHole',3.3,22,knobx-2,0,'Dimensions.AxisHeight','x')])
+        finish(knob,base,'insert')
+    doc.recompute()
+    visible={o.Name for o in final_parts}
+    for o in doc.Objects:
+        if hasattr(o,'ViewObject') and o.TypeId not in ('App::Part',): o.ViewObject.Visibility=o.Name in visible
+    base.ViewObject.Visibility=True;rotor.ViewObject.Visibility=True
+    # Validate real solids and evaluate the maximum board swing envelope.
+    checks=[]
+    for o in final_parts:
+        checks.append({'part':o.Name,'valid':o.Shape.isValid(),'solids':len(o.Shape.Solids),'volume_mm3':round(o.Shape.Volume,2)})
+    radius=math.hypot(160/2,30+1.6/2)
+    report={'status':'layout study, not released for printing','solid_checks':checks,'rotation_envelope':{'board_depth_mm':160,'component_allowance_each_side_mm':30,'axis_height_mm':125,'swept_radius_mm':round(radius,2),'minimum_to_base_top_mm':round(125-radius-20,2)},'open_items':['jaw clamping, generic edge grips and adapter retention','pivot bolt retention and friction test','tie bar joint','ballast retention and tipping test','ESC populated-board jaw clearance','print fits and tolerances']}
+    (ROOT/'work'/'layout-checks.json').write_text(json.dumps(report,indent=2)+'\n')
+    Gui.activeDocument().activeView().viewAxonometric();Gui.activeDocument().activeView().fitAll()
+    Gui.activeDocument().activeView().setAnimationEnabled(False) if hasattr(Gui.activeDocument().activeView(),'setAnimationEnabled') else None
+    doc.recompute()
+    doc.saveAs(str(ROOT/'cad'/'pcb-vise-layout.FCStd'))
+    # STEP is a layout export; the native file retains editable primitive and boolean features.
+    export_doc=App.newDocument('LayoutExport')
+    export_objects=[]
+    for source in final_parts:
+        shape=source.Shape.copy()
+        shape.Placement=source.getGlobalPlacement().multiply(source.Placement.inverse()).multiply(shape.Placement)
+        item=export_doc.addObject('Part::Feature',source.Name);item.Shape=shape
+        export_objects.append(item)
+    export_doc.recompute()
+    Part.export(export_objects,str(ROOT/'exports'/'pcb-vise-layout.step'))
+    App.closeDocument(export_doc.Name)
+    App.setActiveDocument(doc.Name)
+    Gui.activeDocument().activeView().saveImage(str(ROOT/'exports'/'layout-preview.png'),1600,1200,'White')
+    (ROOT/'work'/'build-result.txt').write_text('SUCCESS\n'+str(len(final_parts))+' parts\n')
+except Exception:
+    (ROOT/'work'/'build-result.txt').write_text(traceback.format_exc())
+    raise

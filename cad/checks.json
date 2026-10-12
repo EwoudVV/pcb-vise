@@ -1,0 +1,320 @@
+{
+  "status": "layout study, not released for printing",
+  "solid_checks": [
+    {
+      "part": "LeftFoot",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 133454.26
+    },
+    {
+      "part": "LeftUpright",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 94489.48
+    },
+    {
+      "part": "LeftCarrier",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 86055.59
+    },
+    {
+      "part": "LeftFrictionWasher",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2972.64
+    },
+    {
+      "part": "LeftRubberFoot_76",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1256.64
+    },
+    {
+      "part": "LeftRubberFoot76",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1256.64
+    },
+    {
+      "part": "RightFoot",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 133454.26
+    },
+    {
+      "part": "RightUpright",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 94489.48
+    },
+    {
+      "part": "RightCarrier",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 86055.59
+    },
+    {
+      "part": "RightFrictionWasher",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2972.64
+    },
+    {
+      "part": "RightRubberFoot_76",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1256.64
+    },
+    {
+      "part": "RightRubberFoot76",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1256.64
+    },
+    {
+      "part": "LeftTie_24",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 9408.0
+    },
+    {
+      "part": "RightTie_24",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 9408.0
+    },
+    {
+      "part": "LeftTie16",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 9408.0
+    },
+    {
+      "part": "RightTie16",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 9408.0
+    },
+    {
+      "part": "GuideRod0",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 12566.37
+    },
+    {
+      "part": "GuideRod1",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 12566.37
+    },
+    {
+      "part": "FixedJawBody",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 60980.18
+    },
+    {
+      "part": "FixedMountingAdapter",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 6361.33
+    },
+    {
+      "part": "SlidingJawBody",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 60980.18
+    },
+    {
+      "part": "SlidingMountingAdapter",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 6361.33
+    },
+    {
+      "part": "BoardEnvelope",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 20735.73
+    },
+    {
+      "part": "LeftPivotBolt",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1385.44
+    },
+    {
+      "part": "LeftLockKnob",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 22003.65
+    },
+    {
+      "part": "RightPivotBolt",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 1385.44
+    },
+    {
+      "part": "RightLockKnob",
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 22003.65
+    }
+  ],
+  "rotation_envelope": {
+    "board_depth_mm": 160,
+    "component_allowance_each_side_mm": 30,
+    "axis_height_mm": 125,
+    "swept_radius_mm": 85.72,
+    "minimum_to_base_top_mm": 19.28
+  },
+  "open_items": [
+    "jaw clamping, generic edge grips and adapter retention",
+    "pivot bolt retention and friction test",
+    "tie bar joint",
+    "ballast retention and tipping test",
+    "ESC populated-board jaw clearance",
+    "print fits and tolerances"
+  ],
+  "rotation_samples": [
+    {
+      "angle_degrees": 0,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 15,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 30,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 45,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 60,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 75,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 90,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 105,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 120,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 135,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 150,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 165,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 180,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 195,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 210,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 225,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 240,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 255,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 270,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 285,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 300,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 315,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 330,
+      "intersections": []
+    },
+    {
+      "angle_degrees": 345,
+      "intersections": []
+    }
+  ],
+  "base_joint_overlaps_expected": true,
+  "check_limit": "Interference sampling is of the unpopulated layout, not strength, full swept clearance or a populated ESC.",
+  "step_roundtrip": {
+    "valid": true,
+    "solids": 27,
+    "expected_solids": 27
+  },
+  "fit_coupon": {
+    "valid_solid": true,
+    "solid_count": 1,
+    "mesh_closed": true,
+    "size_mm": [
+      62,
+      46,
+      8
+    ]
+  },
+  "parameter_checks": [
+    {
+      "board_width_mm": 30,
+      "board_valid": true,
+      "board_measured_width_mm": 30.0,
+      "jaw_valid": true,
+      "adapter_valid": true
+    },
+    {
+      "board_width_mm": 116,
+      "board_valid": true,
+      "board_measured_width_mm": 116.0,
+      "jaw_valid": true,
+      "adapter_valid": true
+    },
+    {
+      "board_width_mm": 160,
+      "board_valid": true,
+      "board_measured_width_mm": 160.0,
+      "jaw_valid": true,
+      "adapter_valid": true
+    }
+  ]
+}

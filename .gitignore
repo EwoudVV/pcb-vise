@@ -1,0 +1,8 @@
+.DS_Store
+work/
+engineering/
+media/
+*.FCStd1
+*.FCBak
+__pycache__/
+*.pyc

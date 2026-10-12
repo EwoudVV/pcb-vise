@@ -1,0 +1,85 @@
+from pathlib import Path
+import math,json,traceback
+import FreeCAD as App
+import Part,MeshPart
+ROOT=Path(__file__).resolve().parents[1]
+try:
+    try:
+        doc=App.getDocument('PCB_Vise_Layout')
+    except NameError:
+        doc=App.openDocument(str(ROOT/'cad/pcb-vise-layout.FCStd'))
+    App.setActiveDocument(doc.Name)
+    base=doc.getObject('Base'); rotor=doc.getObject('RotatingFrame'); dims=doc.getObject('Dimensions')
+    report=json.loads((ROOT/'work/layout-checks.json').read_text())
+    parts=[doc.getObject(r['part']) for r in report['solid_checks']]
+    fixed_parts=[o for o in parts if o in base.Group]
+    moving_parts=[o for o in parts if o in rotor.Group]
+    def world_shape(o):
+        s=o.Shape.copy()
+        s.Placement=o.getGlobalPlacement().multiply(o.Placement.inverse()).multiply(s.Placement)
+        return s
+    report=json.loads((ROOT/'work/layout-checks.json').read_text())
+    rotation=[]
+    static_shapes={o.Name:world_shape(o) for o in fixed_parts if 'PivotBolt' not in o.Name}
+    for angle in range(0,360,15):
+        dims.Tilt=angle;doc.recompute()
+        hits=[]
+        for moving in moving_parts:
+            s=world_shape(moving)
+            for fixed in fixed_parts:
+                # Nominal bolt shanks intentionally occupy the pivot axis.
+                if 'PivotBolt' in fixed.Name:continue
+                fs=static_shapes[fixed.Name]
+                sb=s.BoundBox;fb=fs.BoundBox
+                if any(getattr(sb,a+'Max')<=getattr(fb,a+'Min')+1e-7 or getattr(fb,a+'Max')<=getattr(sb,a+'Min')+1e-7 for a in 'XYZ'):
+                    continue
+                v=s.common(fs).Volume
+                if v>0.01:hits.append([moving.Name,fixed.Name,round(v,3)])
+        rotation.append({'angle_degrees':angle,'intersections':hits})
+        print('checked angle',angle,'contacts',len(hits),flush=True)
+    dims.Tilt=20;doc.recompute()
+    report['rotation_samples']=rotation
+    report['base_joint_overlaps_expected']=True
+    report['check_limit']='Interference sampling is of the unpopulated layout, not strength, full swept clearance or a populated ESC.'
+    exp=App.newDocument('LayoutExport')
+    objs=[]
+    for o in parts:
+        item=exp.addObject('Part::Feature',o.Name);item.Shape=world_shape(o);item.Label=o.Label;objs.append(item)
+    exp.recompute();Part.export(objs,str(ROOT/'exports/pcb-vise-layout.step'))
+    roundtrip=Part.Shape();roundtrip.read(str(ROOT/'exports/pcb-vise-layout.step'))
+    report['step_roundtrip']={'valid':roundtrip.isValid(),'solids':len(roundtrip.Solids),'expected_solids':len(objs)}
+    App.closeDocument(exp.Name)
+    # Independent fit coupon. The corner notch marks the small end of both rows.
+    coupon=App.newDocument('FitCoupon')
+    body=coupon.addObject('Part::Box','CouponBlank');body.Length=62;body.Width=46;body.Height=8
+    holes=[]
+    for i,diameter in enumerate([8.1,8.2,8.3,8.4]):
+        h=coupon.addObject('Part::Cylinder','RodHole'+str(i));h.Radius=diameter/2;h.Height=10;h.Placement.Base=App.Vector(10+14*i,12,-1);holes.append(h)
+    for i,af in enumerate([10.1,10.2,10.3,10.4]):
+        h=coupon.addObject('Part::Prism','NutPocket'+str(i));h.Polygon=6;h.Circumradius=af/math.sqrt(3);h.Height=6;h.Placement.Base=App.Vector(10+14*i,33,2.7);holes.append(h)
+        c=coupon.addObject('Part::Cylinder','NutThroughHole'+str(i));c.Radius=3.3;c.Height=10;c.Placement.Base=App.Vector(10+14*i,33,-1);holes.append(c)
+    n=coupon.addObject('Part::Box','CornerNotch');n.Length=3;n.Width=3;n.Height=10;n.Placement.Base=App.Vector(-0.5,-0.5,-1);holes.append(n)
+    tools=coupon.addObject('Part::MultiFuse','Cutouts');tools.Shapes=holes
+    result=coupon.addObject('Part::Cut','FitCoupon');result.Base=body;result.Tool=tools;coupon.recompute()
+    if App.GuiUp:
+        for o in coupon.Objects:o.ViewObject.Visibility=o==result
+        result.ViewObject.ShapeColor=(0.12,0.56,0.58)
+    (ROOT/'exports/fit-tests').mkdir(exist_ok=True)
+    coupon.saveAs(str(ROOT/'cad/fit-coupon.FCStd'))
+    mesh=MeshPart.meshFromShape(Shape=result.Shape,LinearDeflection=0.05,AngularDeflection=0.15,Relative=False)
+    mesh.write(str(ROOT/'exports/fit-tests/rod-and-nut-fit.stl'))
+    report['fit_coupon']={'valid_solid':result.Shape.isValid(),'solid_count':len(result.Shape.Solids),'mesh_closed':mesh.isSolid(),'size_mm':[62,46,8]}
+    if App.GuiUp:
+        Gui.activeDocument().activeView().viewTop();Gui.activeDocument().activeView().fitAll()
+        Gui.activeDocument().activeView().saveImage(str(ROOT/'exports/fit-tests/fit-coupon.png'),1200,900,'White')
+    App.setActiveDocument(doc.Name)
+    if App.GuiUp:
+        Gui.activeDocument().activeView().viewAxonometric();Gui.activeDocument().activeView().fitAll()
+    doc.recompute();doc.save()
+    if App.GuiUp:
+        Gui.activeDocument().activeView().saveImage(str(ROOT/'exports/layout-preview.png'),1600,1200,'White')
+    (ROOT/'work/layout-checks.json').write_text(json.dumps(report,indent=2)+'\n')
+    (ROOT/'work/validation-result.txt').write_text('SUCCESS\n')
+except Exception:
+    (ROOT/'work/validation-result.txt').write_text(traceback.format_exc())
+    raise
