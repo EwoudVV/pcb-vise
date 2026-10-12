@@ -1,5 +1,7 @@
 # rotating pcb vise
 
+[Half Life project](https://halflife.hackclub.com/projects/cmv5uxwy90kuh01n00i6f4u88)
+
 a freestanding holder for soldering and inspecting PCBs. the frame turns over so both sides of the board are reachable, and the jaw spacing adjusts along two metal rods
 
 ## first layout
