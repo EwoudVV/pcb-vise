@@ -1,0 +1,24 @@
+from pathlib import Path
+import json
+import FreeCAD as App
+ROOT=Path(__file__).resolve().parents[1]
+doc=App.openDocument(str(ROOT/'cad/pcb-vise.FCStd'))
+App.setActiveDocument(doc.Name)
+parts=json.loads((ROOT/'cad/parts.json').read_text())
+names={r['name'] for r in parts if r['variant']=='main'}
+for o in doc.Objects:
+    if o.TypeId!='App::Part':o.ViewObject.Visibility=o.Name in names
+for r in parts:
+    o=doc.getObject(r['name']);o.ViewObject.ShapeColor=tuple(r['color']);o.ViewObject.LineColor=(.08,.1,.12)
+for n in ('Base','RotatingFrame','FixedJaw','SlidingJaw'):doc.getObject(n).ViewObject.Visibility=True
+doc.getObject('AlternativeGrips').ViewObject.Visibility=False
+Gui.activeDocument().activeView().viewAxonometric();Gui.activeDocument().activeView().fitAll()
+doc.save()
+Gui.activeDocument().activeView().saveImage(str(ROOT/'exports/mechanisms-preview.png'),1800,1300,'White')
+for r in parts:doc.getObject(r['name']).ViewObject.Visibility=r['group']=='FixedJaw' and r['variant']=='main'
+Gui.activeDocument().activeView().fitAll();Gui.activeDocument().activeView().saveImage(str(ROOT/'exports/jaw-detail.png'),1500,1200,'White')
+for r in parts:doc.getObject(r['name']).ViewObject.Visibility=r['name'].startswith('Right') and r['group']=='Base'
+Gui.activeDocument().activeView().fitAll();Gui.activeDocument().activeView().saveImage(str(ROOT/'exports/base-detail.png'),1500,1200,'White')
+for r in parts:doc.getObject(r['name']).ViewObject.Visibility=r['variant']=='main'
+Gui.activeDocument().activeView().fitAll();doc.save()
+(ROOT/'work/mechanisms-20261014/render-result.txt').write_text('SUCCESS\n')

@@ -55,3 +55,9 @@ printer: Bambu P1S, with PLA, Bambu TPU for AMS and PETG-CF available. use a 256
 ## edge-clearance check
 
 the first pad check found conflicts in the ESC's right-side 2 mm edge strip across the proposed central grip region. the left-side strip had no pad hits in that region, but that does not prove clearance from component bodies. the first assembly therefore uses the four mounting holes. generic removable edge grips remain part of the plan
+
+## October 14 mechanism checkpoint
+
+current model: cad/pcb-vise.FCStd. the split jaw clamps, interchangeable inserts, captured pivot hardware, base lap joints, ballast lids and TPU shoes are now modelled. use ASSEMBLY.md and HARDWARE.md for the current assembly and fastener details. the older layout remains as a checkpoint
+
+109 main assembly solids and two alternative edge grips pass the solid checks. the default assembly has no detected overlaps, 24 rotation samples are clear, and both insert configurations were checked at 30, 116 and 160 mm board widths. all 28 part STL meshes are closed and fit the P1S envelope. physical fit, holding force, ballast and populated-board clearance remain untested

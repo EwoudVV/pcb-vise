@@ -1,0 +1,1667 @@
+[
+  {
+    "name": "LeftBaseScrew0",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 789.476
+  },
+  {
+    "name": "LeftBaseWasher0",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 55.638
+  },
+  {
+    "name": "LeftBaseNut0",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 139.99
+  },
+  {
+    "name": "LeftBaseScrew1",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 789.476
+  },
+  {
+    "name": "LeftBaseWasher1",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 55.638
+  },
+  {
+    "name": "LeftBaseNut1",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 139.99
+  },
+  {
+    "name": "LeftBaseScrew2",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 789.476
+  },
+  {
+    "name": "LeftBaseWasher2",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 55.638
+  },
+  {
+    "name": "LeftBaseNut2",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 139.99
+  },
+  {
+    "name": "LeftBaseScrew3",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 789.476
+  },
+  {
+    "name": "LeftBaseWasher3",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 55.638
+  },
+  {
+    "name": "LeftBaseNut3",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 139.99
+  },
+  {
+    "name": "LeftLidScrew_89",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 212.647
+  },
+  {
+    "name": "LeftLidNut_89",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 44.759
+  },
+  {
+    "name": "LeftLidScrew_32",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 212.647
+  },
+  {
+    "name": "LeftLidNut_32",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 44.759
+  },
+  {
+    "name": "LeftLidScrew32",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 212.647
+  },
+  {
+    "name": "LeftLidNut32",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 44.759
+  },
+  {
+    "name": "LeftLidScrew89",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 212.647
+  },
+  {
+    "name": "LeftLidNut89",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 44.759
+  },
+  {
+    "name": "LeftFoot",
+    "group": "Base",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.16,
+      0.25,
+      0.3
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 123893.312
+  },
+  {
+    "name": "LeftFrontBallastLid",
+    "group": "Base",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.16,
+      0.25,
+      0.3
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 9395.525
+  },
+  {
+    "name": "LeftRearBallastLid",
+    "group": "Base",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.16,
+      0.25,
+      0.3
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 9395.525
+  },
+  {
+    "name": "LeftUpright",
+    "group": "Base",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.16,
+      0.25,
+      0.3
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 94462.085
+  },
+  {
+    "name": "LeftFrontShoe",
+    "group": "Base",
+    "material": "TPU for AMS",
+    "variant": "main",
+    "color": [
+      0.94,
+      0.58,
+      0.19
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 10049.446
+  },
+  {
+    "name": "LeftRearShoe",
+    "group": "Base",
+    "material": "TPU for AMS",
+    "variant": "main",
+    "color": [
+      0.94,
+      0.58,
+      0.19
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 10049.446
+  },
+  {
+    "name": "RightBaseScrew0",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 789.476
+  },
+  {
+    "name": "RightBaseWasher0",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 55.638
+  },
+  {
+    "name": "RightBaseNut0",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 139.99
+  },
+  {
+    "name": "RightBaseScrew1",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 789.476
+  },
+  {
+    "name": "RightBaseWasher1",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 55.638
+  },
+  {
+    "name": "RightBaseNut1",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 139.99
+  },
+  {
+    "name": "RightBaseScrew2",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 789.476
+  },
+  {
+    "name": "RightBaseWasher2",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 55.638
+  },
+  {
+    "name": "RightBaseNut2",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 139.99
+  },
+  {
+    "name": "RightBaseScrew3",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 789.476
+  },
+  {
+    "name": "RightBaseWasher3",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 55.638
+  },
+  {
+    "name": "RightBaseNut3",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 139.99
+  },
+  {
+    "name": "RightLidScrew_89",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 212.647
+  },
+  {
+    "name": "RightLidNut_89",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 44.759
+  },
+  {
+    "name": "RightLidScrew_32",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 212.647
+  },
+  {
+    "name": "RightLidNut_32",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 44.759
+  },
+  {
+    "name": "RightLidScrew32",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 212.647
+  },
+  {
+    "name": "RightLidNut32",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 44.759
+  },
+  {
+    "name": "RightLidScrew89",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 212.647
+  },
+  {
+    "name": "RightLidNut89",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 44.759
+  },
+  {
+    "name": "RightFoot",
+    "group": "Base",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.16,
+      0.25,
+      0.3
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 123893.312
+  },
+  {
+    "name": "RightFrontBallastLid",
+    "group": "Base",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.16,
+      0.25,
+      0.3
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 9395.525
+  },
+  {
+    "name": "RightRearBallastLid",
+    "group": "Base",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.16,
+      0.25,
+      0.3
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 9395.525
+  },
+  {
+    "name": "RightUpright",
+    "group": "Base",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.16,
+      0.25,
+      0.3
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 94462.085
+  },
+  {
+    "name": "RightFrontShoe",
+    "group": "Base",
+    "material": "TPU for AMS",
+    "variant": "main",
+    "color": [
+      0.94,
+      0.58,
+      0.19
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 10049.446
+  },
+  {
+    "name": "RightRearShoe",
+    "group": "Base",
+    "material": "TPU for AMS",
+    "variant": "main",
+    "color": [
+      0.94,
+      0.58,
+      0.19
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 10049.446
+  },
+  {
+    "name": "LeftFrontTie",
+    "group": "Base",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.16,
+      0.25,
+      0.3
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 18352.335
+  },
+  {
+    "name": "RightFrontTie",
+    "group": "Base",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.16,
+      0.25,
+      0.3
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 18352.335
+  },
+  {
+    "name": "FrontJointScrew0",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 314.563
+  },
+  {
+    "name": "FrontJointNut0",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 93.545
+  },
+  {
+    "name": "FrontJointScrew1",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 314.563
+  },
+  {
+    "name": "FrontJointNut1",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 93.545
+  },
+  {
+    "name": "LeftRearTie",
+    "group": "Base",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.16,
+      0.25,
+      0.3
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 18352.335
+  },
+  {
+    "name": "RightRearTie",
+    "group": "Base",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.16,
+      0.25,
+      0.3
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 18352.335
+  },
+  {
+    "name": "RearJointScrew0",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 314.563
+  },
+  {
+    "name": "RearJointNut0",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 93.545
+  },
+  {
+    "name": "RearJointScrew1",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 314.563
+  },
+  {
+    "name": "RearJointNut1",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 93.545
+  },
+  {
+    "name": "LeftCarrier",
+    "group": "RotatingFrame",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.12,
+      0.55,
+      0.57
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 98243.705
+  },
+  {
+    "name": "LeftFrictionRing",
+    "group": "RotatingFrame",
+    "material": "TPU for AMS",
+    "variant": "main",
+    "color": [
+      0.94,
+      0.58,
+      0.19
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 2972.638
+  },
+  {
+    "name": "LeftPivotBolt",
+    "group": "RotatingFrame",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 1760.127
+  },
+  {
+    "name": "LeftPivotWasher",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 129.484
+  },
+  {
+    "name": "LeftPivotKnob",
+    "group": "Base",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.94,
+      0.58,
+      0.19
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 19286.09
+  },
+  {
+    "name": "LeftPivotNut",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 286.889
+  },
+  {
+    "name": "RightCarrier",
+    "group": "RotatingFrame",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.12,
+      0.55,
+      0.57
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 98243.705
+  },
+  {
+    "name": "RightFrictionRing",
+    "group": "RotatingFrame",
+    "material": "TPU for AMS",
+    "variant": "main",
+    "color": [
+      0.94,
+      0.58,
+      0.19
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 2972.638
+  },
+  {
+    "name": "RightPivotBolt",
+    "group": "RotatingFrame",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 1760.127
+  },
+  {
+    "name": "RightPivotWasher",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 129.484
+  },
+  {
+    "name": "RightPivotKnob",
+    "group": "Base",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.94,
+      0.58,
+      0.19
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 19286.09
+  },
+  {
+    "name": "RightPivotNut",
+    "group": "Base",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 286.889
+  },
+  {
+    "name": "GuideRod0",
+    "group": "RotatingFrame",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 12566.371
+  },
+  {
+    "name": "GuideRod1",
+    "group": "RotatingFrame",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 12566.371
+  },
+  {
+    "name": "FixedJawBody",
+    "group": "FixedJaw",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.12,
+      0.55,
+      0.57
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 70644.652
+  },
+  {
+    "name": "FixedClampScrew",
+    "group": "FixedJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 792.085
+  },
+  {
+    "name": "FixedClampWasher",
+    "group": "FixedJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 48.412
+  },
+  {
+    "name": "FixedClampNut",
+    "group": "FixedJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 93.545
+  },
+  {
+    "name": "FixedMountingAdapter",
+    "group": "FixedJaw",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.94,
+      0.58,
+      0.19
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 12176.323
+  },
+  {
+    "name": "FixedBoardScrew0",
+    "group": "FixedJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 184.372
+  },
+  {
+    "name": "FixedBoardWasher0",
+    "group": "FixedJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 11.545
+  },
+  {
+    "name": "FixedBoardNut0",
+    "group": "FixedJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 44.759
+  },
+  {
+    "name": "FixedBoardScrew1",
+    "group": "FixedJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 184.372
+  },
+  {
+    "name": "FixedBoardWasher1",
+    "group": "FixedJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 11.545
+  },
+  {
+    "name": "FixedBoardNut1",
+    "group": "FixedJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 44.759
+  },
+  {
+    "name": "FixedAdapterScrew0",
+    "group": "FixedJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 247.989
+  },
+  {
+    "name": "FixedAdapterNut0",
+    "group": "FixedJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 44.759
+  },
+  {
+    "name": "FixedAdapterScrew1",
+    "group": "FixedJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 247.989
+  },
+  {
+    "name": "FixedAdapterNut1",
+    "group": "FixedJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 44.759
+  },
+  {
+    "name": "FixedEdgeGrip",
+    "group": "FixedJaw",
+    "material": "TPU for AMS",
+    "variant": "alternative",
+    "color": [
+      0.94,
+      0.58,
+      0.19
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 8667.141
+  },
+  {
+    "name": "SlidingJawBody",
+    "group": "SlidingJaw",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.12,
+      0.55,
+      0.57
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 70644.652
+  },
+  {
+    "name": "SlidingClampScrew",
+    "group": "SlidingJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 792.085
+  },
+  {
+    "name": "SlidingClampWasher",
+    "group": "SlidingJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 48.412
+  },
+  {
+    "name": "SlidingClampNut",
+    "group": "SlidingJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 93.545
+  },
+  {
+    "name": "SlidingMountingAdapter",
+    "group": "SlidingJaw",
+    "material": "PETG-CF",
+    "variant": "main",
+    "color": [
+      0.94,
+      0.58,
+      0.19
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 12176.323
+  },
+  {
+    "name": "SlidingBoardScrew0",
+    "group": "SlidingJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 184.372
+  },
+  {
+    "name": "SlidingBoardWasher0",
+    "group": "SlidingJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 11.545
+  },
+  {
+    "name": "SlidingBoardNut0",
+    "group": "SlidingJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 44.759
+  },
+  {
+    "name": "SlidingBoardScrew1",
+    "group": "SlidingJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 184.372
+  },
+  {
+    "name": "SlidingBoardWasher1",
+    "group": "SlidingJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 11.545
+  },
+  {
+    "name": "SlidingBoardNut1",
+    "group": "SlidingJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 44.759
+  },
+  {
+    "name": "SlidingAdapterScrew0",
+    "group": "SlidingJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 247.989
+  },
+  {
+    "name": "SlidingAdapterNut0",
+    "group": "SlidingJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 44.759
+  },
+  {
+    "name": "SlidingAdapterScrew1",
+    "group": "SlidingJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 247.989
+  },
+  {
+    "name": "SlidingAdapterNut1",
+    "group": "SlidingJaw",
+    "material": "steel",
+    "variant": "main",
+    "color": [
+      0.7,
+      0.73,
+      0.76
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 44.759
+  },
+  {
+    "name": "SlidingEdgeGrip",
+    "group": "SlidingJaw",
+    "material": "TPU for AMS",
+    "variant": "alternative",
+    "color": [
+      0.94,
+      0.58,
+      0.19
+    ],
+    "printed": true,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 8667.141
+  },
+  {
+    "name": "BoardEnvelope",
+    "group": "RotatingFrame",
+    "material": "reference PCB",
+    "variant": "main",
+    "color": [
+      0.15,
+      0.4,
+      0.24
+    ],
+    "printed": false,
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 20735.728
+  }
+]
