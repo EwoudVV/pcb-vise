@@ -1,63 +1,49 @@
-# rotating pcb vise
+# pcb vise design plan
 
-a freestanding holder for soldering and inspecting boards. the first board to fit is the 116 x 112 mm ESC, but the jaws should adjust for smaller projects too
+this week is for finishing the design. printing, assembly and physical tests belong to build week
 
-## starting targets
+## current design
 
-these are design targets, not measured performance
+- freestanding base with covered ballast pockets and removable TPU feet
+- two 8 x 250 mm guide rods
+- jaws that slide along the rods and lock with M4 screws
+- M6 pivot bolts and knobs, with TPU friction rings
+- removable mounting-hole adapters for the ESC
+- a second pair of TPU edge grips for other boards
+- base bars with bolted lap joints
 
-- 30-160 mm distance between the board grips
-- support a board up to 160 mm across the rotation direction
-- full rotation, with a lock that holds the board while soldering
-- replaceable edge grips, with clearance for parts on both sides
-- a stable base with rubber feet and space for removable ballast
-- metal guide rods and ordinary metric fasteners
-- split printed parts to keep the required print area manageable
-- used for hand soldering and inspection; take the board out for reflow
+the current model is `cad/pcb-vise.FCStd`. the files with `layout` in their names are the earlier version
 
-## first mechanism to check
+## remaining design work
 
-two uprights support a rotating frame. one jaw stays fixed in the frame and the other slides on two metal rods. a small screw provides the final clamping adjustment after sliding the jaw into position. keep that clamping force low enough to avoid bending the PCB
+1. check the populated ESC against the adapters, jaws and frame. include screw heads, connectors, cable bends and access for soldering tools
+2. review the rotation clearance throughout the movement, including the largest intended board and its components
+3. work out the ballast volume, expected mass and tipping limits. choose the weight material and decide whether the base dimensions need changing
+4. review the clamp slit, pivot friction surfaces and fastener joints. check wall thickness, screw engagement and access to each nut
+5. choose actual suppliers and hardware. check tolerances and make a priced BOM with shipping
+6. add dimensioned drawings for the fits and joints. keep untested print allowances clearly identified
+7. review the print orientations, bridges, supports and material use in Bambu Studio. adjust the models before making the final exports
+8. finish the README, assembly drawings, website BOM, cart screenshots and closing reel for submission
 
-one pivot gets a locking knob. the frame needs to carry the lock's torque to the other side without twisting. compare a friction disc against an indexed face before choosing the final lock
+## targets to confirm
 
-use replaceable jaw inserts so different PCB thicknesses and crowded edges can be handled without reprinting the frame. start with a 1.6 mm board sample. the ESC mounting holes offer another support option if its edge components obstruct the grips
+- boards 30-160 mm wide
+- up to 160 mm across the direction of rotation
+- replaceable grips for different board thicknesses
+- full rotation with room for components and cables
+- a stable base that stays put during soldering
+- every printed part fits the P1S bed
 
-## checks before detailed CAD
+the current model uses a 1.6 mm board. the ESC mounting pattern is 109 x 105 mm. its crowded right edge is why the first adapters use mounting holes
 
-1. pick actual rods, screws, nuts, washers and feet with dimensions and prices
-2. check the ESC outline and component envelope where the jaws would touch
-3. work out the full rotation clearance, including components and the frame
-4. check the base against tipping and sliding when pressing on the board
-5. make small fit samples for rod holes, nut pockets, jaw grooves and the pivot lock
-6. verify clamp travel and assembly access before adding cosmetic details
+## materials and hardware
 
-## files to make
+the available printer is a Bambu P1S. PLA, PETG-CF and TPU for AMS are available. the hardened-steel nozzle needed for PETG-CF still needs confirming
 
-- editable FreeCAD assembly and part features
-- STEP assembly and individual printable models
-- dimensioned assembly views and hardware BOM
-- fit samples and printing notes
-- renders and assembly instructions
+use HARDWARE.md and hardware.csv for the current sizes and quantities. those are not final supplier quotes yet
 
-## week plan
+## build week
 
-- Monday: scope, mechanism, hardware dimensions and quotes
-- Tuesday-Wednesday: first assembly and interference checks
-- Thursday-Friday: fit samples if printer access is available, then revisions
-- Saturday: exports, BOM, instructions and renders
-- Sunday: final review and submission
+start with the small rod and nut-pocket samples, then one jaw clamp. use the results to adjust the fits before printing the full set. after assembly, check pivot holding force, foot retention, sliding and tipping with a representative board
 
-## still to confirm
-
-printer: Bambu P1S, with PLA, Bambu TPU for AMS and PETG-CF available. use a 256 x 256 mm print area. nozzle type, hardware already owned, ballast and the final budget still need confirming. FreeCAD 1.1.4 is installed and the first layout is saved. all 27 parts are valid solids; the STEP round-trip contains 27 solids. 24 sampled rotations show no intersections between the rotating assembly and the base. the board and jaw parameters recompute at 30, 116 and 160 mm. these checks use the unpopulated board envelope and do not verify strength, fastener retention or the populated ESC. no physical test has been completed yet
-
-## edge-clearance check
-
-the first pad check found conflicts in the ESC's right-side 2 mm edge strip across the proposed central grip region. the left-side strip had no pad hits in that region, but that does not prove clearance from component bodies. the first assembly therefore uses the four mounting holes. generic removable edge grips remain part of the plan
-
-## October 14 mechanism checkpoint
-
-current model: cad/pcb-vise.FCStd. the split jaw clamps, interchangeable inserts, captured pivot hardware, base lap joints, ballast lids and TPU shoes are now modelled. use ASSEMBLY.md and HARDWARE.md for the current assembly and fastener details. the older layout remains as a checkpoint
-
-109 main assembly solids and two alternative edge grips pass the solid checks. the default assembly has no detected overlaps, 24 rotation samples are clear, and both insert configurations were checked at 30, 116 and 160 mm board widths. all 28 part STL meshes are closed and fit the P1S envelope. physical fit, holding force, ballast and populated-board clearance remain untested
+none of those physical tests has happened yet. keep the results separate from the CAD checks already saved in the repo

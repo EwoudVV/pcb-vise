@@ -1,6 +1,6 @@
 # prototype assembly
 
-this version has modelled fasteners and joints, but no physical fit, friction or load tests yet. start with the small fit samples and one jaw clamp before printing the whole vise
+these are draft instructions for build week. the design is still changing, and nothing has been printed or tested yet. when the build starts, print the small fit samples and one jaw clamp before making the whole vise
 
 ## printing
 
