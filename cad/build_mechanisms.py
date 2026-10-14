@@ -63,15 +63,15 @@ def build():
         sh=cyl(n+'Shaft',xyz,m/2,length,axis)
         hd=hexagon(n+'Head',end,10,4,axis) if head=='hex' else cyl(n+'Head',end,dh/2,hh,axis)
         o=finish(fuse(n,[sh,hd]),g,'steel','steel')
-        hw.append({'part':f'M{m} x {length:g} '+('hex bolt DIN 933' if head=='hex' else 'socket cap screw DIN 912'),'quantity':1,'reference':n})
+        hw.append({'part':f'M{m} x {length:g} '+('hex bolt DIN 933' if head=='hex' else 'socket cap screw DIN 912'),'quantity':1,'reference':o.Name})
         return o
     def nut(n,g,xyz,m,axis='z'):
         af,h={3:(5.5,2.4),4:(7,3.2),5:(8,4),6:(10,5)}[m]
         o=cut(n,hexagon(n+'Blank',xyz,af,h,axis),[cyl(n+'Hole',xyz,m/2+.05,h,axis)])
-        finish(o,g,'steel','steel');hw.append({'part':f'M{m} nut DIN 934, {af:g} mm AF x {h:g} mm','quantity':1,'reference':n})
+        finish(o,g,'steel','steel');hw.append({'part':f'M{m} nut DIN 934, {af:g} mm AF x {h:g} mm','quantity':1,'reference':o.Name})
     def washer(n,g,xyz,m,od,h,axis='z'):
         o=cut(n,cyl(n+'Blank',xyz,od/2,h,axis),[cyl(n+'Hole',xyz,m/2+.2,h,axis)])
-        finish(o,g,'steel','steel');hw.append({'part':f'M{m} washer, {od:g} mm OD x {h:g} mm','quantity':1,'reference':n})
+        finish(o,g,'steel','steel');hw.append({'part':f'M{m} washer, {od:g} mm OD x {h:g} mm','quantity':1,'reference':o.Name})
 
     # Foot pockets, removable ballast covers and matching upright fasteners.
     for side,x in [('Left',-147),('Right',147)]:
