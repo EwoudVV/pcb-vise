@@ -2,30 +2,30 @@
 
 [Half Life project](https://halflife.hackclub.com/projects/cmv5uxwy90kuh01n00i6f4u88)
 
-i'm making a rotating holder for soldering and working on circuit boards. the jaws slide to fit different board sizes, and the frame flips over so you can get to the back without taking the board out
+i'm making a pcb vise for soldering. the jaws slide to fit different boards, and the whole frame flips over so i can get to the back without taking the board out
 
 ![pcb vise](exports/mechanisms-preview.png)
 
-this is my CAD week project for Half Life. the design is still in progress. printing and assembly come later, during build week
+this is for Half Life CAD week. still designing it, nothing printed yet
 
 ## how it works
 
-two steel rods hold the jaws. each jaw has a slit and an M4 screw that locks it onto a rod. the knobs at the ends tighten the rotating frame against the uprights to hold its angle
+the jaws slide on two steel rods and lock with an Allen key. the knobs on either side hold the frame at the angle i want
 
-the grips bolt onto the jaws, so they can be replaced. there are two versions so far:
+the grips bolt on, so i can swap between:
 
 - an adapter that uses the four mounting holes on my ESC
 - TPU grips with slots for the edges of other boards
 
-the ESC adapter uses mounting holes because there are components close to the edge where a normal grip would sit. its hole spacing is 109 x 105 mm. the board sits 10 mm higher now, with the XT60 facing the open space along the rods
+my ESC has too much stuff near the edges for normal grips. the adapters use its mounting holes and raise it a little to leave room for the connectors
 
 ![jaw and mounting adapter](exports/jaw-detail.png)
 
-the feet are 240 mm long, with covered pockets for four steel blocks. TPU liners hold the blocks and TPU shoes slide over the ends. the base splits into smaller pieces joined with screws so it fits on my P1S
+steel blocks inside the feet add weight to the base. TPU covers go on the ends for grip. the base screws together from smaller pieces that fit on my P1S
 
 ## materials
 
-i'm planning to use PETG-CF for the rigid parts and TPU for AMS for the feet, grips and friction rings. i also have PLA for fit samples when build week starts. the rods, screws, nuts and washers will be metal
+planning on PETG-CF for the rigid parts, TPU for AMS for the soft parts, and PLA for the first fit samples. the rods and fasteners are metal
 
 ## files
 
@@ -39,9 +39,9 @@ i'm planning to use PETG-CF for the rigid parts and TPU for AMS for the feet, gr
 
 ## still to finish
 
-- confirm the remaining connector dimensions and cable bends
-- finish the tolerances and dimensioned drawings
-- choose suppliers and price the full hardware list, including shipping
-- go through the parts in the slicer and adjust anything awkward to print
+- check the remaining connector sizes and room for cables
+- finish the fits and drawings
+- price the hardware and shipping
+- go through the parts in the slicer
 
-then i can finish the design files and submit this week's work. nothing has been printed or tested yet
+printing and testing come during build week

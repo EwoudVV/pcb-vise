@@ -1,8 +1,8 @@
 # hardware for one vise
 
-quantities below come from the assembly model. they include the ESC adapters. the TPU edge grips reuse the four adapter screws and nuts. mounting the ESC uses another four screws, four washers and four nuts; leave those out when using ordinary edge grips
+this list includes the ESC mounts. for ordinary edge grips, leave out four M3 x 25 screws, four M3 washers and four M3 nuts. the screws that attach the grips to the jaws stay the same
 
-this is a size and quantity BOM, not a priced order. the two guide rods had a $24.06 combined reference price on October 12, before shipping. other prices still need checking
+still choosing suppliers. the rod reference was $24.06 for the pair on October 12, before shipping
 
 | Part | Qty |
 | --- | ---: |
@@ -23,31 +23,29 @@ this is a size and quantity BOM, not a priced order. the two guide rods had a $2
 | M3 washer, 6.4 mm OD x 0.5 mm | 4 |
 | Steel ballast, 38.1 x 60 x 19.05 mm | 4 |
 
-## fit details
+## check before ordering
 
-- use ordinary DIN 934 full nuts. Nyloc nuts and some ISO 4032 nuts are taller than these pockets
-- M3 nuts: 5.5 mm across flats, 2.4 mm high; pockets are 5.8 mm across flats
-- M4 nuts: 7 mm across flats, 3.2 mm high; pockets are 7.3 mm across flats
-- M5 nuts: 8 mm across flats, 4 mm high; the 4.4 mm pockets do not accept a 4.7 mm tall substitute
-- M6 nuts: 10 mm across flats, 5 mm high; knob pockets are 10.3 mm across flats
-- check the actual rod diameter and nut fit with small samples before printing everything
+use the nut sizes below. taller nuts, including Nylocs, won't fit the pockets
 
-the screw models use plain cylinders for the threads and simplified heads. their lengths are measured from under the head. verify the ordered hardware against the dimensions above
+| Nut | Across flats | Height | Pocket across flats |
+| --- | ---: | ---: | ---: |
+| M3 | 5.5 mm | 2.4 mm | 5.8 mm |
+| M4 | 7 mm | 3.2 mm | 7.3 mm |
+| M5 | 8 mm | 4 mm | 8.3 mm |
+| M6 | 10 mm | 5 mm | 10.3 mm |
 
-## printed and loose parts
+the M5 pockets are only 4.4 mm deep, so a 4.7 mm tall nut won't work. check the actual hardware with the fit samples before printing all the parts. screw lengths are measured from under the head
 
-the STL directory contains 32 printed parts: 30 for the ESC configuration and two alternative TPU edge grips. the TPU friction rings and slip-on feet are included. four steel blocks sit in TPU liners under the ballast lids
+## ballast
 
-the ballast is four pieces of 3/4 x 1 1/2 inch steel bar, each cut to 60 mm. the nominal dimensions are 38.1 x 60 x 19.05 mm. order them cut or arrange cutting during build week, then deburr the edges before fitting the liners
+four pieces of 3/4 x 1 1/2 inch steel bar, each cut to 60 mm. that makes each block 38.1 x 60 x 19.05 mm, about 1.36 kg for all four. they sit in printed TPU liners under the lids. deburr the cut edges before putting them in
 
-a 12 inch length of [1018 bar](https://www.onlinemetals.com/en/buy/carbon-steel/0-75-x-1-5-carbon-steel-rectangle-bar-1018-cold-finish/pid/9720) was listed at $19.66 on October 15. that covers the stock length for four pieces with cutting allowance, but not cutting charges or shipping. the blocks are about 1.36 kg together by calculation
+a 12 inch length of [1018 bar](https://www.onlinemetals.com/en/buy/carbon-steel/0-75-x-1-5-carbon-steel-rectangle-bar-1018-cold-finish/pid/9720) was $19.66 on October 15. there's enough length for four blocks and the saw cuts. cutting and shipping aren't priced yet
 
-the stability calculation uses smaller dimensions and credits only the blocks and rods. it assumes a flat bench, all four feet touching, and a 5 N horizontal load no higher than 225 mm. it gives a tipping margin just over 1.5. this is a design case, not a tested rating; sliding friction still needs checking during build week
-
-see [the ballast drawing](drawings/feet-and-ballast.svg) for the cut lengths, pockets and lid dimensions
+[ballast drawing](drawings/feet-and-ballast.svg) · [base calculation notes](DESIGN.md)
 
 ## references
 
 - [DIN 934 nut dimensions](https://www.westfieldfasteners.co.uk/Standards/Nut_Hex_M.html)
 - [DIN 912 cap screw dimensions](https://www.boltking.co.uk/din-912)
-- [guide rod reference](https://abra-electronics.com/robotics/axles-rods/mp-rm8-250-8mm-m8-250mm-linear-shaft-rail-rod.html)
+- [guide rods](https://abra-electronics.com/robotics/axles-rods/mp-rm8-250-8mm-m8-250mm-linear-shaft-rail-rod.html)
