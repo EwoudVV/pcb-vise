@@ -10,13 +10,14 @@
 
 | Week | Tier | Hours logged | Entries |
 | --- | --- | --- | --- |
-| Week 2 | Tier 2 | 8h | 3 |
+| Week 2 | Tier 2 | 11h | 4 |
 
 ## Contents
 
 1. [2026-10-12 – Devlog 01: first layout](#2026-10-12-devlog-01-first-layout)
 2. [2026-10-14 – Devlog 02: clamps, pivots and base](#2026-10-14-devlog-02-clamps-pivots-and-base)
 3. [2026-10-15 – Devlog 03: board clearance and ballast](#2026-10-15-devlog-03-board-clearance-and-ballast)
+4. [2026-10-15 – Devlog 04: hardware and print setup](#2026-10-15-devlog-04-hardware-and-print-setup)
 
 ## Design
 
@@ -93,3 +94,27 @@ updated the lids and screws, added the drawings and changed the hardware list. n
 ![feet-drawing](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/6gi99sjgqS9PS6AP7HOtnbXmi9NgjIY3/d43671af15374b2ee1f47cc679c72620b74bc7fcc492c41ace7a88a98350c857.png)
 
 ![adapter-drawing](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/6gi99sjgqS9PS6AP7HOtnbXmi9NgjIY3/8f1d653530a170e335ebfd3ac27fd60df8415974416fd5511b9f816eb35e8f63.png)
+
+### 2026-10-15 – Devlog 04: hardware and print setup
+
+**3h**
+
+Devlog 04: hardware and print setup
+
+went through the hardware list and found actual parts for it. the standard M3 washers are a little wider than the ones i had modelled, and the M4 washers are thinner. changed those and checked the ESC again. the larger washers still clear the available component models
+
+checked the screw lengths and nut pockets too. found cheaper rods at $5.79 each, and put all the screws, nuts and washers in one cart. that order is $8.74 before shipping. the full parts list is $39.92 before shipping, tax and cutting the steel
+
+set up the print plates for my P1S and 0.4 mm hardened nozzle. the first slice caught two problems: the right-hand base bars had ledges hanging in the air, and the feet had unsupported roofs over the bar slots. flipped the right bars and added supports in the feet
+
+the revised plates slice without warnings. saved six Bambu Studio projects with the materials and settings included, then reopened and sliced those to check they saved properly. the full set is about 749 g of PETG-CF and 115 g of TPU by the slicer estimate
+
+updated the CAD, STEP, STLs and hardware list. the fastener and steel carts have shipping estimates, but the rod store isn't loading properly yet. still need that quote, a plan for cutting the steel and the last connector details. nothing printed or ordered
+
+![01-feet](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/6gi99sjgqS9PS6AP7HOtnbXmi9NgjIY3/aa52da5a15f2133aee93331dd295f573d7bca77773f117967b29ea9a306437ee.png)
+
+![03-bars-and-adapters](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/6gi99sjgqS9PS6AP7HOtnbXmi9NgjIY3/9736d6a72df658abde8ec033a5b479bcc8a06aaf75adfc25e9682e79ce94d92f.png)
+
+![06-tpu](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/6gi99sjgqS9PS6AP7HOtnbXmi9NgjIY3/d59e0ab1449b3fa78ea88ec9fefef5f37541492c655b3f0fdf318675fb76437a.png)
+
+![bolt-depot-shipping](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/6gi99sjgqS9PS6AP7HOtnbXmi9NgjIY3/805201f0c8228ef274172fde3ed34557be9cbe04fa8d272591cc309c28e0c762.jpg)
