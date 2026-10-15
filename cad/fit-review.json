@@ -1,0 +1,225 @@
+{
+  "orientation": "ESC rotated 180 degrees in its own plane; XT60 towards open rod space",
+  "adapter_lift_mm": 10,
+  "library_models_present": 397,
+  "missing_component_models": 17,
+  "allowances": [
+    {
+      "ref": "R254",
+      "type": "missing model allowance",
+      "height_mm": 5
+    },
+    {
+      "ref": "U702",
+      "type": "missing model allowance",
+      "height_mm": 5
+    },
+    {
+      "ref": "Q204",
+      "type": "missing model allowance",
+      "height_mm": 5
+    },
+    {
+      "ref": "J501",
+      "type": "missing model allowance",
+      "height_mm": 8
+    },
+    {
+      "ref": "Y501",
+      "type": "missing model allowance",
+      "height_mm": 5
+    },
+    {
+      "ref": "Q206",
+      "type": "missing model allowance",
+      "height_mm": 5
+    },
+    {
+      "ref": "J102",
+      "type": "missing model allowance",
+      "height_mm": 25
+    },
+    {
+      "ref": "R234",
+      "type": "missing model allowance",
+      "height_mm": 5
+    },
+    {
+      "ref": "Q202",
+      "type": "missing model allowance",
+      "height_mm": 5
+    },
+    {
+      "ref": "J101",
+      "type": "missing model allowance",
+      "height_mm": 20
+    },
+    {
+      "ref": "Q301",
+      "type": "missing model allowance",
+      "height_mm": 5
+    },
+    {
+      "ref": "Q201",
+      "type": "missing model allowance",
+      "height_mm": 5
+    },
+    {
+      "ref": "Q203",
+      "type": "missing model allowance",
+      "height_mm": 5
+    },
+    {
+      "ref": "Q205",
+      "type": "missing model allowance",
+      "height_mm": 5
+    },
+    {
+      "ref": "R214",
+      "type": "missing model allowance",
+      "height_mm": 5
+    },
+    {
+      "ref": "F401",
+      "type": "missing model allowance",
+      "height_mm": 5
+    },
+    {
+      "ref": "U201",
+      "type": "missing model allowance",
+      "height_mm": 5
+    },
+    {
+      "ref": "J101 plug access",
+      "type": "plug and access allowance",
+      "height_mm": 20
+    },
+    {
+      "ref": "J501 access",
+      "type": "connector/tool access allowance",
+      "height_mm": 25
+    },
+    {
+      "ref": "J701 access",
+      "type": "connector/tool access allowance",
+      "height_mm": 25
+    },
+    {
+      "ref": "J805 access",
+      "type": "connector/tool access allowance",
+      "height_mm": 25
+    },
+    {
+      "ref": "J806 access",
+      "type": "connector/tool access allowance",
+      "height_mm": 25
+    }
+  ],
+  "contacts": {
+    "original orientation, no lift": [
+      {
+        "reference": "J101",
+        "vise_part": "FixedJawBody",
+        "volume_mm3": 6.956
+      },
+      {
+        "reference": "J101 plug access",
+        "vise_part": "LeftCarrier",
+        "volume_mm3": 4034.625
+      },
+      {
+        "reference": "J101 plug access",
+        "vise_part": "FixedJawBody",
+        "volume_mm3": 63.534
+      },
+      {
+        "reference": "J701 access",
+        "vise_part": "SlidingJawBody",
+        "volume_mm3": 0.214
+      },
+      {
+        "reference": "J805 access",
+        "vise_part": "SlidingJawBody",
+        "volume_mm3": 0.195
+      },
+      {
+        "reference": "J806 access",
+        "vise_part": "SlidingJawBody",
+        "volume_mm3": 0.195
+      }
+    ],
+    "reversed ESC, 10mm lift": []
+  },
+  "continuous_rotation_bounds": [
+    {
+      "fixed_part": "LeftFrontTie",
+      "radial_gap_lower_bound_mm": 44.23
+    },
+    {
+      "fixed_part": "RightFrontTie",
+      "radial_gap_lower_bound_mm": 52.443
+    },
+    {
+      "fixed_part": "FrontJointScrew0",
+      "radial_gap_lower_bound_mm": 48.967
+    },
+    {
+      "fixed_part": "FrontJointNut0",
+      "radial_gap_lower_bound_mm": 60.88
+    },
+    {
+      "fixed_part": "FrontJointScrew1",
+      "radial_gap_lower_bound_mm": 48.967
+    },
+    {
+      "fixed_part": "FrontJointNut1",
+      "radial_gap_lower_bound_mm": 60.88
+    },
+    {
+      "fixed_part": "LeftRearTie",
+      "radial_gap_lower_bound_mm": 44.23
+    },
+    {
+      "fixed_part": "RightRearTie",
+      "radial_gap_lower_bound_mm": 52.443
+    },
+    {
+      "fixed_part": "RearJointScrew0",
+      "radial_gap_lower_bound_mm": 48.967
+    },
+    {
+      "fixed_part": "RearJointNut0",
+      "radial_gap_lower_bound_mm": 60.88
+    },
+    {
+      "fixed_part": "RearJointScrew1",
+      "radial_gap_lower_bound_mm": 48.967
+    },
+    {
+      "fixed_part": "RearJointNut1",
+      "radial_gap_lower_bound_mm": 60.88
+    }
+  ],
+  "mounting_screw_tool_contacts": [],
+  "tool_allowance": "6 mm diameter, 35 mm above each mounting screw head",
+  "limits": [
+    "Keepout boxes are allowances, not exact missing component models.",
+    "Cables, solder joints and manufacturing tolerances are not exact CAD models.",
+    "Disconnect or free cables before turning the board.",
+    "The PCB mounting screws and washers are included in the contact comparisons."
+  ],
+  "edge_grips_at_zero_lift": [
+    {
+      "width_mm": 30,
+      "contacts": []
+    },
+    {
+      "width_mm": 116,
+      "contacts": []
+    },
+    {
+      "width_mm": 160,
+      "contacts": []
+    }
+  ]
+}

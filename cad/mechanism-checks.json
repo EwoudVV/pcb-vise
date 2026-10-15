@@ -1,6 +1,6 @@
 {
   "status": "prototype; physical fit, friction and load tests pending",
-  "solids": 111,
+  "solids": 119,
   "default_geometry": true,
   "assembly_intersections": [],
   "rotation_samples": [
@@ -120,8 +120,8 @@
   ],
   "step": {
     "valid": true,
-    "solids": 109,
-    "expected": 109
+    "solids": 117,
+    "expected": 117
   },
   "stl_exports": [
     {
@@ -131,8 +131,8 @@
       "variant": "main",
       "bounds_mm": [
         58.0,
-        190.0,
-        16.0
+        240.0,
+        26.0
       ],
       "closed_mesh": true,
       "fits_p1s": true
@@ -144,7 +144,7 @@
       "variant": "main",
       "bounds_mm": [
         50.0,
-        63.0,
+        83.0,
         3.0
       ],
       "closed_mesh": true,
@@ -157,7 +157,7 @@
       "variant": "main",
       "bounds_mm": [
         50.0,
-        63.0,
+        83.0,
         3.0
       ],
       "closed_mesh": true,
@@ -171,7 +171,7 @@
       "bounds_mm": [
         50.0,
         54.0,
-        128.0
+        118.0
       ],
       "closed_mesh": true,
       "fits_p1s": true
@@ -183,7 +183,7 @@
       "variant": "main",
       "bounds_mm": [
         63.0,
-        22.3,
+        32.3,
         22.5
       ],
       "closed_mesh": true,
@@ -196,7 +196,7 @@
       "variant": "main",
       "bounds_mm": [
         63.0,
-        22.3,
+        32.3,
         22.5
       ],
       "closed_mesh": true,
@@ -209,8 +209,8 @@
       "variant": "main",
       "bounds_mm": [
         58.0,
-        190.0,
-        16.0
+        240.0,
+        26.0
       ],
       "closed_mesh": true,
       "fits_p1s": true
@@ -222,7 +222,7 @@
       "variant": "main",
       "bounds_mm": [
         50.0,
-        63.0,
+        83.0,
         3.0
       ],
       "closed_mesh": true,
@@ -235,7 +235,7 @@
       "variant": "main",
       "bounds_mm": [
         50.0,
-        63.0,
+        83.0,
         3.0
       ],
       "closed_mesh": true,
@@ -249,7 +249,7 @@
       "bounds_mm": [
         50.0,
         54.0,
-        128.0
+        118.0
       ],
       "closed_mesh": true,
       "fits_p1s": true
@@ -261,7 +261,7 @@
       "variant": "main",
       "bounds_mm": [
         63.0,
-        22.3,
+        32.3,
         22.5
       ],
       "closed_mesh": true,
@@ -274,7 +274,7 @@
       "variant": "main",
       "bounds_mm": [
         63.0,
-        22.3,
+        32.3,
         22.5
       ],
       "closed_mesh": true,
@@ -431,7 +431,7 @@
       "bounds_mm": [
         13.0,
         120.0,
-        12.2
+        22.2
       ],
       "closed_mesh": true,
       "fits_p1s": true
@@ -470,7 +470,7 @@
       "bounds_mm": [
         13.0,
         120.0,
-        12.2
+        22.2
       ],
       "closed_mesh": true,
       "fits_p1s": true
@@ -487,6 +487,58 @@
       ],
       "closed_mesh": true,
       "fits_p1s": true
+    },
+    {
+      "part": "LeftFrontBallastLiner",
+      "orientation": "as modelled, underside down",
+      "material": "TPU for AMS",
+      "variant": "main",
+      "bounds_mm": [
+        44.0,
+        63.0,
+        19.45
+      ],
+      "closed_mesh": true,
+      "fits_p1s": true
+    },
+    {
+      "part": "LeftRearBallastLiner",
+      "orientation": "as modelled, underside down",
+      "material": "TPU for AMS",
+      "variant": "main",
+      "bounds_mm": [
+        44.0,
+        63.0,
+        19.45
+      ],
+      "closed_mesh": true,
+      "fits_p1s": true
+    },
+    {
+      "part": "RightFrontBallastLiner",
+      "orientation": "as modelled, underside down",
+      "material": "TPU for AMS",
+      "variant": "main",
+      "bounds_mm": [
+        44.0,
+        63.0,
+        19.45
+      ],
+      "closed_mesh": true,
+      "fits_p1s": true
+    },
+    {
+      "part": "RightRearBallastLiner",
+      "orientation": "as modelled, underside down",
+      "material": "TPU for AMS",
+      "variant": "main",
+      "bounds_mm": [
+        44.0,
+        63.0,
+        19.45
+      ],
+      "closed_mesh": true,
+      "fits_p1s": true
     }
   ],
   "limits": [
@@ -494,29 +546,5 @@
     "Rotation uses 15 degree samples and an unpopulated PCB envelope.",
     "Split clamps and TPU feet require print and load tests.",
     "Ballast mass and grip friction are not established."
-  ],
-  "edge_grip_configurations": [
-    {
-      "board_width_mm": 30,
-      "intersections": []
-    },
-    {
-      "board_width_mm": 116,
-      "intersections": []
-    },
-    {
-      "board_width_mm": 160,
-      "intersections": []
-    }
-  ],
-  "fastener_coupon": {
-    "valid": true,
-    "solid_count": 1,
-    "closed_mesh": true,
-    "size_mm": [
-      50,
-      50,
-      8
-    ]
-  }
+  ]
 }

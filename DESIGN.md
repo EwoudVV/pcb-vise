@@ -47,3 +47,13 @@ use HARDWARE.md and hardware.csv for the current sizes and quantities. those are
 start with the small rod and nut-pocket samples, then one jaw clamp. use the results to adjust the fits before printing the full set. after assembly, check pivot holding force, foot retention, sliding and tipping with a representative board
 
 none of those physical tests has happened yet. keep the results separate from the CAD checks already saved in the repo
+
+## October 15 update
+
+reviewed the holder with the available ESC component models and extra space reserved for the missing models and connectors. the XT60 needs to face the unused rod length. the ESC adapters now lift the board 10 mm and use M3 x 25 mounting screws
+
+the feet are now 240 mm long with deeper ballast pockets. four 38.1 x 60 x 19.05 mm steel blocks sit in TPU liners under the lids. the upright screws are M5 x 35 and lid screws M3 x 30
+
+added the adapter and ballast drawings. the tipping calculation is for a 5 N horizontal load at 225 mm above a flat bench, with all feet touching. it credits only conservative steel-block and rod weights. actual sliding resistance and holding force remain build-week checks
+
+next: confirm connector and wire details, finish the supplier quotes and remaining tolerances, then review the parts in the slicer. no printing or physical testing this week

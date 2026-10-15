@@ -18,8 +18,8 @@ the STLs in `exports/parts/` are already moved to the build plate and oriented. 
 
 1. join each pair of base bars at the middle lap with two M4 x 12 screws and M4 nuts. the screw heads are on top and the nuts sit underneath. assemble this before fitting the feet
 2. place the bars in the recesses on the inner halves of the feet. the upright's inner screws pass through the bars too
-3. load the M5 nuts through the openings under the feet. fit each upright with four M5 x 25 screws and M5 washers
-4. load the M3 lid nuts from underneath. add ballast and fit the four lids with eight M3 x 20 screws
+3. load the M5 nuts through the openings under the feet. fit each upright with four M5 x 35 screws and M5 washers
+4. load the M3 lid nuts from underneath. fit the four TPU liners and steel blocks, then fit the four lids with eight M3 x 30 screws
 5. slide the TPU shoes onto the ends of the feet. their upper lips retain them on the base. the inside of each shoe has a blind relief for the outer lid-screw tip
 
 hand-tighten fasteners and check that the lap joints stay flat. don't use screw torque to force an incorrectly sized nut or rod into a printed part
@@ -38,9 +38,9 @@ the nominal rod seats allow 0.5 mm at each rod end. check actual shaft length be
 
 1. fit an M4 nut under each jaw clamp and an M4 x 50 screw with washer from above. the horizontal slit lets the jaw close around the front guide rod. an Allen key is used for this lock
 2. insert the four M3 adapter nuts through the outer faces of the jaw bodies
-3. choose either the rigid ESC adapters or the TPU edge grips. fasten them with the same four M3 x 25 screws, inserted from the space between the jaws
+3. choose either the raised ESC adapters or the TPU edge grips. the edge grips hold boards at the original pivot-axis height; use the separate edge-grip assembly file to view that setup. fasten them with the same four M3 x 25 screws, inserted from the space between the jaws
 4. attach the inserts before closing the jaws around a small board. at the minimum opening, there is not enough room between them to insert a long driver
-5. for the ESC, load the four M3 nuts beneath its adapter rails, then use four M3 x 16 screws and small washers through the PCB mounting holes. confirm the washer and screw-head clearance on the populated board
+5. for the ESC, turn the board so the XT60 points toward the unused rod length. load the four M3 nuts beneath its raised adapter rails, then use four M3 x 25 screws and small washers through the PCB mounting holes. the posts raise the board 10 mm above the original position. confirm the washer and screw-head clearance on the populated board
 6. for the TPU edge grips, slide the jaws into light contact with the board and lock their positions. the nominal grooves are 2.2 mm high for a 1.6 mm board. don't squeeze or bend the PCB
 
 ## tests before use
@@ -50,9 +50,9 @@ the nominal rod seats allow 0.5 mm at each rod end. check actual shaft length be
 - verify all screws fully engage their nuts and no tip touches the bench
 - test the TPU shoes for grip and retention
 - test the pivot lock first with a light dummy board, then with representative board mass
-- check full rotation with actual component heights and cables; the CAD tests use an unpopulated board envelope
+- check full rotation with actual component heights and cables; the CAD review includes the available component models and reserved connector spaces; the missing models and actual wiring still need confirmation
 - measure the assembled mass and test for tipping and sliding with gentle hand pressure
 
-for context, a 5 N horizontal force applied at 125 mm height creates 0.625 N m of overturning moment. a centered mass needs about 0.65 kg just to balance that moment across a 97.5 mm half-depth, without a safety margin or allowance for slipping. this is a calculation to guide the ballast test, not a load rating
+the revised base uses 240 mm feet and four steel blocks in lined pockets. its calculated tipping margin is just over 1.5 for a 5 N horizontal force at 225 mm height, using conservative block and rod weights. the calculation assumes a level bench and all feet touching. it does not establish sliding resistance or cover impacts
 
 keep the PCB out of the holder for reflow. the printed parts are not a reflow fixture

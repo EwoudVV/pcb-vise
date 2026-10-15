@@ -12,7 +12,7 @@ def build():
     if DOC in App.listDocuments(): App.closeDocument(DOC)
     d=App.newDocument(DOC)
     dims=d.addObject('App::FeaturePython','Dimensions')
-    for k,v in {'BoardWidth':116,'BoardDepth':112,'BoardThickness':1.6,'AxisHeight':125,'GuideBore':8.3}.items():
+    for k,v in {'BoardWidth':116,'BoardDepth':112,'BoardThickness':1.6,'AxisHeight':125,'GuideBore':8.3,'AdapterLift':10}.items():
         dims.addProperty('App::PropertyLength',k,'Dimensions');setattr(dims,k,v)
     dims.addProperty('App::PropertyAngle','Tilt','Dimensions');dims.Tilt=20
     dims.addProperty('App::PropertyString','Status','Notes');dims.Status='Prototype for fit testing. Not load-tested.'
@@ -59,7 +59,8 @@ def build():
     def screw(n,g,xyz,m,length,axis='z',head='cap'):
         # xyz is the thread tip, with the head at the positive end of the chosen axis.
         dh={3:5.5,4:7.22,5:8.72,6:10}[m];hh={3:3,4:4,5:5,6:4}[m]
-        end=list(xyz);end['xyz'.index(axis)]+=length
+        end=list(xyz);axis_i='xyz'.index(axis)
+        end[axis_i]=(end[axis_i]+f' + {length:g} mm') if isinstance(end[axis_i],str) else end[axis_i]+length
         sh=cyl(n+'Shaft',xyz,m/2,length,axis)
         hd=hexagon(n+'Head',end,10,4,axis) if head=='hex' else cyl(n+'Head',end,dh/2,hh,axis)
         o=finish(fuse(n,[sh,hd]),g,'steel','steel')
@@ -75,40 +76,40 @@ def build():
 
     # Foot pockets, removable ballast covers and matching upright fasteners.
     for side,x in [('Left',-147),('Right',147)]:
-        blank=box(side+'FootBlank',(x-29,-95,4),(58,190,16));tools=[]
-        for i,y in enumerate((-83,38)):tools.append(box(side+'BallastPocket'+str(i),(x-23,y,10),(46,45,12)))
+        blank=box(side+'FootBlank',(x-29,-120,4),(58,240,26));tools=[]
+        for i,y in enumerate((-108,43)):tools.append(box(side+'BallastPocket'+str(i),(x-23,y,10),(46,65,22)))
         for y in (-18,18):
             slotx=x-.2 if x<0 else x-29.2
             tools.append(box(side+'BarSeat',(slotx,y-8.2,7.8),(29.4,16.4,8.4)))
         for i,(dx,y) in enumerate([(-16,-18),(16,-18),(-16,18),(16,18)]):
-            px=x+dx;tools += [cyl(side+'BaseThrough'+str(i),(px,y,3),2.75,28),hexagon(side+'BaseNutPocket'+str(i),(px,y,5.8),8.3,4.4),cyl(side+'BaseNutEntry'+str(i),(px,y,3),4.95,2.8)]
-            screw(side+'BaseScrew'+str(i),base,(px,y,4),5,25)
-            washer(side+'BaseWasher'+str(i),base,(px,y,28),5,10,1)
+            px=x+dx;tools += [cyl(side+'BaseThrough'+str(i),(px,y,3),2.75,38),hexagon(side+'BaseNutPocket'+str(i),(px,y,5.8),8.3,4.4),cyl(side+'BaseNutEntry'+str(i),(px,y,3),4.95,2.8)]
+            screw(side+'BaseScrew'+str(i),base,(px,y,4),5,35)
+            washer(side+'BaseWasher'+str(i),base,(px,y,38),5,10,1)
             nut(side+'BaseNut'+str(i),base,(px,y,6),5)
-        for y in (-89,-32,32,89):
-            tools += [cyl(side+'LidBore',(x,y,3),1.7,24),hexagon(side+'LidNutPocket',(x,y,5.8),5.8,2.8),cyl(side+'LidNutEntry',(x,y,3),3.5,2.8)]
-            screw(side+'LidScrew'+str(y),base,(x,y,3),3,20)
+        for y in (-114,-37,37,114):
+            tools += [cyl(side+'LidBore',(x,y,3),1.7,34),hexagon(side+'LidNutPocket',(x,y,5.8),5.8,2.8),cyl(side+'LidNutEntry',(x,y,3),3.5,2.8)]
+            screw(side+'LidScrew'+str(y),base,(x,y,3),3,30)
             nut(side+'LidNut'+str(y),base,(x,y,6),3)
         finish(cut(side+'Foot',blank,tools),base)
-        for label,ys,holes in [('Front',-92,(-89,-32)),('Rear',29,(32,89))]:
-            lid=box(side+label+'LidBlank',(x-25,ys,20),(50,63,3))
-            finish(cut(side+label+'BallastLid',lid,[cyl(side+label+'LidHole',(x,y,19),1.7,5) for y in holes]),base)
-        flange=box(side+'Flange',(x-25,-27,20),(50,54,8))
-        web=box(side+'Web',(x-7,-23,28),(14,46,'Dimensions.AxisHeight - 28 mm'))
+        for label,ys,holes in [('Front',-117,(-114,-37)),('Rear',34,(37,114))]:
+            lid=box(side+label+'LidBlank',(x-25,ys,30),(50,83,3))
+            finish(cut(side+label+'BallastLid',lid,[cyl(side+label+'LidHole',(x,y,29),1.7,5) for y in holes]),base)
+        flange=box(side+'Flange',(x-25,-27,30),(50,54,8))
+        web=box(side+'Web',(x-7,-23,38),(14,46,'Dimensions.AxisHeight - 38 mm'))
         crown=cyl(side+'Crown',(x-7,0,'Dimensions.AxisHeight'),23,14,'x')
         tools=[cyl(side+'PivotBore',(x-8,0,'Dimensions.AxisHeight'),3.3,16,'x')]
-        tools += [cyl(side+'FlangeHole',(x+dx,y,19),2.75,10) for dx,y in [(-16,-18),(16,-18),(-16,18),(16,18)]]
+        tools += [cyl(side+'FlangeHole',(x+dx,y,29),2.75,10) for dx,y in [(-16,-18),(16,-18),(-16,18),(16,18)]]
         finish(cut(side+'Upright',fuse(side+'UprightBlank',[flange,web,crown]),tools),base)
         # Slip-on TPU shoes: no adhesives or screws under the ballast pockets.
         for end in (-1,1):
-            y0=75 if end>0 else -97.5
+            y0=100 if end>0 else -122.5
             floor=box(side+'ShoeFloor',(x-31.5,y0,0),(63,22.5,4))
-            outery=95.3 if end>0 else -97.5
-            parts=[floor,box(side+'ShoeEnd',(x-31.5,outery,4),(63,2.2,18.3))]
-            for dx in (-31.5,29.3):parts.append(box(side+'ShoeWall',(x+dx,y0,4),(2.2,22.5,18.3)))
-            for dx in (-31.5,26.5):parts.append(box(side+'ShoeLip',(x+dx,y0,20.3),(5,22.5,2)))
+            outery=120.3 if end>0 else -122.5
+            parts=[floor,box(side+'ShoeEnd',(x-31.5,outery,4),(63,2.2,28.3))]
+            for dx in (-31.5,29.3):parts.append(box(side+'ShoeWall',(x+dx,y0,4),(2.2,22.5,28.3)))
+            for dx in (-31.5,26.5):parts.append(box(side+'ShoeLip',(x+dx,y0,30.3),(5,22.5,2)))
             shoe=fuse(side+'ShoeBlank',parts)
-            relief=cyl(side+'ShoeBoltRelief',(x,89*end,2.5),2,2)
+            relief=cyl(side+'ShoeBoltRelief',(x,114*end,2.5),2,2)
             finish(cut(side+('FrontShoe' if end<0 else 'RearShoe'),shoe,[relief]),base,'TPU for AMS','soft')
 
     # Two bolted lap joints, with their nuts accessible before the base is fitted.
@@ -167,15 +168,15 @@ def build():
         nut(side+'ClampNut',g,(bx+9,-38,-44.8),4)
         ax=-94 if sign<0 else 13;holex=-88.5 if sign<0 else 20.5
         rail=box(side+'AdapterRail',(ax,'-Dimensions.BoardDepth / 2 - 4 mm',-13),(13,'Dimensions.BoardDepth + 8 mm',8))
-        bosses=[cyl(side+'Standoff',(holex,y,-5),3.2,4.2) for y in ('-Dimensions.BoardDepth / 2 + 3.5 mm','Dimensions.BoardDepth / 2 - 3.5 mm')]
+        bosses=[cyl(side+'Standoff',(holex,y,-5),3.2,'Dimensions.AdapterLift + 4.2 mm') for y in ('-Dimensions.BoardDepth / 2 + 3.5 mm','Dimensions.BoardDepth / 2 - 3.5 mm')]
         cuts=[]
         for y in ('-Dimensions.BoardDepth / 2 + 3.5 mm','Dimensions.BoardDepth / 2 - 3.5 mm'):
-            cuts += [cyl(side+'BoardBore',(holex,y,-14),1.7,16),hexagon(side+'BoardNutPocket',(holex,y,-13.1),5.8,3)]
+            cuts += [cyl(side+'BoardBore',(holex,y,-14),1.7,'Dimensions.AdapterLift + 16 mm'),hexagon(side+'BoardNutPocket',(holex,y,-13.1),5.8,3)]
         for y in (-20,20):cuts.append(cyl(side+'AdapterScrewHole',(ax-1,y,-7),1.7,15,'x'))
         finish(cut(side+'MountingAdapter',fuse(side+'AdapterBlank',[rail]+bosses),cuts),g,'PETG-CF','soft')
         for i,y in enumerate(('-Dimensions.BoardDepth / 2 + 3.5 mm','Dimensions.BoardDepth / 2 - 3.5 mm')):
-            screw(side+'BoardScrew'+str(i),g,(holex,y,-14.7),3,16)
-            washer(side+'BoardWasher'+str(i),g,(holex,y,.8),3,6.4,.5)
+            screw(side+'BoardScrew'+str(i),g,(holex,y,'Dimensions.AdapterLift - 23.7 mm'),3,25)
+            washer(side+'BoardWasher'+str(i),g,(holex,y,'Dimensions.AdapterLift + 0.8 mm'),3,6.4,.5)
             nut(side+'BoardNut'+str(i),g,(holex,y,-12.7),3)
         for i,y in enumerate((-20,20)):
             if sign<0:screw(side+'AdapterScrew'+str(i),g,(-106,y,-7),3,25,'x')
@@ -192,9 +193,17 @@ def build():
         groove=box(side+'EdgeGroove',(groovex,-32,-1.1),(2.2,64,2.2))
         cuts=[groove]+[cyl(side+'EdgeMountHole',(ax-1,y,-7),1.7,15,'x') for y in (-20,20)]
         finish(cut(side+'EdgeGrip',fuse(side+'EdgeBlank',[rail,lip]),cuts),g,'TPU for AMS','soft','alternative')
-    plate=box('BoardEnvelopeBlank',(-92,'-Dimensions.BoardDepth / 2','-Dimensions.BoardThickness / 2'),('Dimensions.BoardWidth','Dimensions.BoardDepth','Dimensions.BoardThickness'))
-    holes=[cyl('BoardHole',(x,y,-2),1.6,4) for x in (-88.5,'Dimensions.BoardWidth - 95.5 mm') for y in ('-Dimensions.BoardDepth / 2 + 3.5 mm','Dimensions.BoardDepth / 2 - 3.5 mm')]
+    plate=box('BoardEnvelopeBlank',(-92,'-Dimensions.BoardDepth / 2','Dimensions.AdapterLift - Dimensions.BoardThickness / 2'),('Dimensions.BoardWidth','Dimensions.BoardDepth','Dimensions.BoardThickness'))
+    holes=[cyl('BoardHole',(x,y,'Dimensions.AdapterLift - 2 mm'),1.6,4) for x in (-88.5,'Dimensions.BoardWidth - 95.5 mm') for y in ('-Dimensions.BoardDepth / 2 + 3.5 mm','Dimensions.BoardDepth / 2 - 3.5 mm')]
     finish(cut('BoardEnvelope',plate,holes),rotor,'reference PCB','board')
+    for side,x in [('Left',-147),('Right',147)]:
+        for label,y in [('Front',-75.5),('Rear',75.5)]:
+            tray=box(side+label+'LinerBlank',(x-22,y-31.5,10),(44,63,19.45))
+            cavity=box(side+label+'LinerCavity',(x-19.5,y-30.5,10.4),(39,61,20))
+            finish(cut(side+label+'BallastLiner',tray,[cavity]),base,'TPU for AMS','soft')
+            block=box(side+label+'Ballast',(x-19.05,y-30,10.4),(38.1,60,19.05))
+            finish(block,base,'steel','steel')
+            hw.append({'part':'Steel ballast, 38.1 x 60 x 19.05 mm','quantity':1,'reference':block.Name})
     d.recompute()
     names={r['name'] for r in manifest if r['variant']=='main'}
     if App.GuiUp:

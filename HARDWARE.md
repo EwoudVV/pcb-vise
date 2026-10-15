@@ -6,10 +6,10 @@ this is a size and quantity BOM, not a priced order. the two guide rods had a $2
 
 | Part | Qty |
 | --- | ---: |
-| M5 x 25 socket cap screw DIN 912 | 8 |
+| M5 x 35 socket cap screw DIN 912 | 8 |
 | M5 washer, 10 mm OD x 1 mm | 8 |
 | M5 nut DIN 934, 8 mm AF x 4 mm | 8 |
-| M3 x 20 socket cap screw DIN 912 | 8 |
+| M3 x 30 socket cap screw DIN 912 | 8 |
 | M3 nut DIN 934, 5.5 mm AF x 2.4 mm | 16 |
 | M4 x 12 socket cap screw DIN 912 | 4 |
 | M4 nut DIN 934, 7 mm AF x 3.2 mm | 6 |
@@ -19,9 +19,9 @@ this is a size and quantity BOM, not a priced order. the two guide rods had a $2
 | 8 x 250 mm smooth steel rod | 2 |
 | M4 x 50 socket cap screw DIN 912 | 2 |
 | M4 washer, 9 mm OD x 1 mm | 2 |
-| M3 x 16 socket cap screw DIN 912 | 4 |
+| M3 x 25 socket cap screw DIN 912 | 8 |
 | M3 washer, 6.4 mm OD x 0.5 mm | 4 |
-| M3 x 25 socket cap screw DIN 912 | 4 |
+| Steel ballast, 38.1 x 60 x 19.05 mm | 4 |
 
 ## fit details
 
@@ -36,9 +36,15 @@ the screw models use plain cylinders for the threads and simplified heads. their
 
 ## printed and loose parts
 
-the STL directory contains 28 printed parts: 26 for the ESC configuration and two alternative TPU edge grips. the TPU friction rings and slip-on feet are included. ballast is separate and is not modelled as a purchased part yet
+the STL directory contains 32 printed parts: 30 for the ESC configuration and two alternative TPU edge grips. the TPU friction rings and slip-on feet are included. four steel blocks sit in TPU liners under the ballast lids
 
-use small steel washers or similar clean steel pieces for ballast. keep them below the lids and away from the screw heads inside the pockets. weigh the complete vise and test it for sliding and tipping before relying on it. no holding-force rating has been established
+the ballast is four pieces of 3/4 x 1 1/2 inch steel bar, each cut to 60 mm. the nominal dimensions are 38.1 x 60 x 19.05 mm. order them cut or arrange cutting during build week, then deburr the edges before fitting the liners
+
+a 12 inch length of [1018 bar](https://www.onlinemetals.com/en/buy/carbon-steel/0-75-x-1-5-carbon-steel-rectangle-bar-1018-cold-finish/pid/9720) was listed at $19.66 on October 15. that covers the stock length for four pieces with cutting allowance, but not cutting charges or shipping. the blocks are about 1.36 kg together by calculation
+
+the stability calculation uses smaller dimensions and credits only the blocks and rods. it assumes a flat bench, all four feet touching, and a 5 N horizontal load no higher than 225 mm. it gives a tipping margin just over 1.5. this is a design case, not a tested rating; sliding friction still needs checking during build week
+
+see [the ballast drawing](drawings/feet-and-ballast.svg) for the cut lengths, pockets and lid dimensions
 
 ## references
 

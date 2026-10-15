@@ -1,0 +1,56 @@
+{
+  "design_case": {
+    "horizontal_force_N": 5,
+    "height_above_bench_mm": 225,
+    "target_tipping_margin": 1.5,
+    "not_a_tested_load_rating": true
+  },
+  "blocks": {
+    "quantity": 4,
+    "nominal_dimensions_mm": [
+      38.1,
+      60,
+      19.05
+    ],
+    "minimum_accepted_dimensions_mm": [
+      37.9,
+      59.5,
+      18.9
+    ],
+    "minimum_density_g_cm3": 7.75,
+    "nominal_total_mass_kg": 1.3587069600000001,
+    "credited_total_mass_kg": 1.321233795,
+    "allowed_in_plane_shift_mm": 2
+  },
+  "rods": {
+    "quantity": 2,
+    "minimum_diameter_mm": 7.95,
+    "minimum_length_mm": 249,
+    "credited_total_mass_kg": 0.19158221228570002,
+    "worst_y_centroid_offset_mm": 46
+  },
+  "support": {
+    "half_depth_mm": 122.5,
+    "half_width_mm": 178.5
+  },
+  "results": {
+    "fore_aft_restoring_Nm": 1.7050303733978127,
+    "side_restoring_Nm": 2.6184934777702265,
+    "applied_Nm": 1.125,
+    "fore_aft_margin": 1.515582554131389,
+    "side_margin": 2.327549758017979,
+    "minimum_static_friction_coefficient_for_5N": 0.33702585379417915
+  },
+  "ignored_positive_mass": [
+    "printed vise parts",
+    "fasteners",
+    "PCB, provided its centre of mass stays inside the support polygon"
+  ],
+  "limitations": [
+    "No physical stability test.",
+    "Assumes flat level bench and all four shoes in contact.",
+    "Sliding friction is unknown and is not established by this tipping calculation.",
+    "Does not cover impacts, leaning on the board or cable loads above 5 N.",
+    "Material dimensions and mass must be verified during build week."
+  ]
+}
