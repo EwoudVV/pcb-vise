@@ -58,7 +58,7 @@ def build():
         return o
     def screw(n,g,xyz,m,length,axis='z',head='cap'):
         # xyz is the thread tip, with the head at the positive end of the chosen axis.
-        dh={3:5.5,4:7.22,5:8.72,6:10}[m];hh={3:3,4:4,5:5,6:4}[m]
+        dh={3:5.68,4:7.22,5:8.72,6:10}[m];hh={3:3,4:4,5:5,6:4}[m]
         end=list(xyz);axis_i='xyz'.index(axis)
         end[axis_i]=(end[axis_i]+f' + {length:g} mm') if isinstance(end[axis_i],str) else end[axis_i]+length
         sh=cyl(n+'Shaft',xyz,m/2,length,axis)
@@ -71,7 +71,7 @@ def build():
         o=cut(n,hexagon(n+'Blank',xyz,af,h,axis),[cyl(n+'Hole',xyz,m/2+.05,h,axis)])
         finish(o,g,'steel','steel');hw.append({'part':f'M{m} nut DIN 934, {af:g} mm AF x {h:g} mm','quantity':1,'reference':o.Name})
     def washer(n,g,xyz,m,od,h,axis='z'):
-        o=cut(n,cyl(n+'Blank',xyz,od/2,h,axis),[cyl(n+'Hole',xyz,m/2+.2,h,axis)])
+        o=cut(n,cyl(n+'Blank',xyz,od/2,h,axis),[cyl(n+'Hole',xyz,{3:3.2,4:4.3,5:5.3,6:6.4}[m]/2,h,axis)])
         finish(o,g,'steel','steel');hw.append({'part':f'M{m} washer, {od:g} mm OD x {h:g} mm','quantity':1,'reference':o.Name})
 
     # Foot pockets, removable ballast covers and matching upright fasteners.
@@ -163,8 +163,8 @@ def build():
             hx=-104 if sign<0 else 33
             cuts += [hexagon(side+'AdapterNutPocket',(hx,y,-7),5.8,3,'x'),cyl(side+'AdapterNutEntry',(-113 if sign<0 else 36,y,-7),3.5,9,'x')]
         finish(cut(side+'JawBody',b,cuts),g,'PETG-CF','jaw')
-        screw(side+'ClampScrew',g,(bx+9,-38,-48),4,50)
-        washer(side+'ClampWasher',g,(bx+9,-38,1),4,9,1)
+        screw(side+'ClampScrew',g,(bx+9,-38,-48.2),4,50)
+        washer(side+'ClampWasher',g,(bx+9,-38,1),4,9,.8)
         nut(side+'ClampNut',g,(bx+9,-38,-44.8),4)
         ax=-94 if sign<0 else 13;holex=-88.5 if sign<0 else 20.5
         rail=box(side+'AdapterRail',(ax,'-Dimensions.BoardDepth / 2 - 4 mm',-13),(13,'Dimensions.BoardDepth + 8 mm',8))
@@ -176,7 +176,7 @@ def build():
         finish(cut(side+'MountingAdapter',fuse(side+'AdapterBlank',[rail]+bosses),cuts),g,'PETG-CF','soft')
         for i,y in enumerate(('-Dimensions.BoardDepth / 2 + 3.5 mm','Dimensions.BoardDepth / 2 - 3.5 mm')):
             screw(side+'BoardScrew'+str(i),g,(holex,y,'Dimensions.AdapterLift - 23.7 mm'),3,25)
-            washer(side+'BoardWasher'+str(i),g,(holex,y,'Dimensions.AdapterLift + 0.8 mm'),3,6.4,.5)
+            washer(side+'BoardWasher'+str(i),g,(holex,y,'Dimensions.AdapterLift + 0.8 mm'),3,7,.5)
             nut(side+'BoardNut'+str(i),g,(holex,y,-12.7),3)
         for i,y in enumerate((-20,20)):
             if sign<0:screw(side+'AdapterScrew'+str(i),g,(-106,y,-7),3,25,'x')

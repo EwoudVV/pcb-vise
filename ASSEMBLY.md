@@ -4,15 +4,16 @@ draft instructions for build week. nothing printed yet. start with the fit sampl
 
 ## printing
 
-the STLs in `exports/parts/` are oriented for printing and fit the P1S bed. keep them at 100% scale. they still need a slicer review
+the STLs in `exports/parts/` are oriented for printing and fit the P1S bed. keep them at 100% scale. the [Bambu Studio plate layouts](exports/print-plates/) include the materials and support settings
 
 - use PLA for the first fit samples
-- planning on PETG-CF for the rigid parts. check that the printer has a hardened-steel nozzle
+- use PETG-CF for the rigid parts with the 0.4 mm hardened-steel nozzle
 - use TPU for AMS for the friction rings, shoes, ballast liners and edge grips
 - print the jaws with the adapter face down, so the rod bores run vertically
 - print the carriers with their inner flat face down, and the pivot knobs with the washer face down
 - print TPU shoes on their closed toe end so the retaining lips build vertically
-- check the bridges over nut pockets and rod seats, plus the horizontal screw holes, in the slicer
+- the right-hand base bars print top face down so their lap ledges rest on the plate
+- the feet need supports under the bar-seat roofs. remove these through the side openings and clean out the nut pockets before assembly
 
 ## base
 

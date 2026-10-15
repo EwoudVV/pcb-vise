@@ -295,7 +295,7 @@
     },
     {
       "part": "RightFrontTie",
-      "orientation": "as modelled, underside down",
+      "orientation": "top face down; lap ledge on bed",
       "material": "PETG-CF",
       "variant": "main",
       "bounds_mm": [
@@ -321,7 +321,7 @@
     },
     {
       "part": "RightRearTie",
-      "orientation": "as modelled, underside down",
+      "orientation": "top face down; lap ledge on bed",
       "material": "PETG-CF",
       "variant": "main",
       "bounds_mm": [

@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-15",
+  "joints": [
+    {
+      "joint": "base uprights",
+      "screw": "M5 x 35",
+      "stack_mm": 33,
+      "nut_height_mm": 4,
+      "tip_past_nut_mm": 2,
+      "nut_pocket_AF_mm": 8.3,
+      "nut_max_AF_mm": 8,
+      "nominal_full_nut_engagement": true,
+      "nominal_pocket_clearance_AF_mm": 0.3
+    },
+    {
+      "joint": "ballast lids",
+      "screw": "M3 x 30",
+      "stack_mm": 27,
+      "nut_height_mm": 2.4,
+      "tip_past_nut_mm": 3,
+      "nut_pocket_AF_mm": 5.8,
+      "nut_max_AF_mm": 5.5,
+      "nominal_full_nut_engagement": true,
+      "nominal_pocket_clearance_AF_mm": 0.3
+    },
+    {
+      "joint": "base lap joints",
+      "screw": "M4 x 12",
+      "stack_mm": 11.2,
+      "nut_height_mm": 3.2,
+      "tip_past_nut_mm": 0.8,
+      "nut_pocket_AF_mm": 7.3,
+      "nut_max_AF_mm": 7,
+      "nominal_full_nut_engagement": true,
+      "nominal_pocket_clearance_AF_mm": 0.3
+    },
+    {
+      "joint": "jaw clamps",
+      "screw": "M4 x 50",
+      "stack_mm": 46.6,
+      "nut_height_mm": 3.2,
+      "tip_past_nut_mm": 3.4,
+      "nut_pocket_AF_mm": 7.3,
+      "nut_max_AF_mm": 7,
+      "nominal_full_nut_engagement": true,
+      "nominal_pocket_clearance_AF_mm": 0.3
+    },
+    {
+      "joint": "ESC mounting holes",
+      "screw": "M3 x 25",
+      "stack_mm": 24,
+      "nut_height_mm": 2.4,
+      "tip_past_nut_mm": 1,
+      "nut_pocket_AF_mm": 5.8,
+      "nut_max_AF_mm": 5.5,
+      "nominal_full_nut_engagement": true,
+      "nominal_pocket_clearance_AF_mm": 0.3
+    },
+    {
+      "joint": "adapter attachment",
+      "screw": "M3 x 25",
+      "stack_mm": 22.8,
+      "nut_height_mm": 2.4,
+      "tip_past_nut_mm": 2.2,
+      "nut_pocket_AF_mm": 5.8,
+      "nut_max_AF_mm": 5.5,
+      "nominal_full_nut_engagement": true,
+      "nominal_pocket_clearance_AF_mm": 0.3
+    },
+    {
+      "joint": "pivot knobs",
+      "screw": "M6 x 50 fully threaded",
+      "stack_mm": 47.5,
+      "nut_height_mm": 5,
+      "tip_past_nut_mm": 2.5,
+      "nut_pocket_AF_mm": 10.3,
+      "nut_max_AF_mm": 10,
+      "nominal_full_nut_engagement": true,
+      "nominal_pocket_clearance_AF_mm": 0.3
+    }
+  ],
+  "limits": [
+    "Nominal dimensions, before print tolerances or clamp compression.",
+    "Physical fit samples are still needed."
+  ],
+  "washer_contact_review": [
+    {
+      "part": "FixedBoardWasher0",
+      "OD_mm": 7,
+      "ID_mm": 3.2,
+      "thickness_mm": 0.5,
+      "contacts": []
+    },
+    {
+      "part": "FixedBoardWasher1",
+      "OD_mm": 7,
+      "ID_mm": 3.2,
+      "thickness_mm": 0.5,
+      "contacts": []
+    },
+    {
+      "part": "SlidingBoardWasher0",
+      "OD_mm": 7,
+      "ID_mm": 3.2,
+      "thickness_mm": 0.5,
+      "contacts": []
+    },
+    {
+      "part": "SlidingBoardWasher1",
+      "OD_mm": 7,
+      "ID_mm": 3.2,
+      "thickness_mm": 0.5,
+      "contacts": []
+    }
+  ]
+}

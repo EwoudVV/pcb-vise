@@ -32,7 +32,7 @@ planning on PETG-CF for the rigid parts, TPU for AMS for the soft parts, and PLA
 - [FreeCAD model](cad/pcb-vise.FCStd)
 - [edge-grip assembly](cad/pcb-vise-edge-grips.FCStd)
 - [STEP file](exports/pcb-vise.step)
-- [STL files](exports/parts/)
+- [STL files](exports/parts/) and [Bambu Studio plates](exports/print-plates/)
 - [adapter drawing](drawings/esc-adapter.svg) and [feet and ballast drawing](drawings/feet-and-ballast.svg)
 - [hardware list](HARDWARE.md) and [CSV](hardware.csv)
 - [assembly instructions](ASSEMBLY.md), still being worked on
@@ -41,7 +41,7 @@ planning on PETG-CF for the rigid parts, TPU for AMS for the soft parts, and PLA
 
 - check the remaining connector sizes and room for cables
 - finish the fits and drawings
-- price the hardware and shipping
-- go through the parts in the slicer
+- finish the shipping quotes and arrange cutting the steel
+- finish the submission BOM and media
 
 printing and testing come during build week

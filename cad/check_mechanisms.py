@@ -78,6 +78,8 @@ def check(doc,parts):
         elif 'EdgeGrip' in name:
             angle=-90 if name.startswith('Fixed') else 90
             s.rotate(App.Vector(),App.Vector(0,1,0),angle);orientation='jaw mounting face down'
+        elif name.startswith('Right') and name.endswith('Tie'):
+            s.rotate(App.Vector(),App.Vector(1,0,0),180);orientation='top face down; lap ledge on bed'
         elif 'FrictionRing' in name:
             s.rotate(App.Vector(),App.Vector(0,1,0),90);orientation='flat ring face down'
         elif 'Shoe' in name:

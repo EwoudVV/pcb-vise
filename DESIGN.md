@@ -15,16 +15,18 @@ the current model is [pcb-vise.FCStd](cad/pcb-vise.FCStd). the [edge-grip versio
 ## before submission
 
 - confirm the remaining connector sizes and cable clearance
-- check the clamp walls, screw lengths, nut access and print allowances
-- finish the drawings and price the hardware, including shipping
-- check supports, bridges and part orientation in Bambu Studio
+- finish the remaining fit drawings and connector details
+- confirm rod shipping and arrange the steel cuts
+- use the saved plate layouts for the build-week fit samples
 - fill out the website BOM, take cart screenshots and make the closing reel
 
 ## sizes and materials
 
 aiming for boards 30-160 mm wide and up to 160 mm across the rotating frame. the model uses a 1.6 mm board. the ESC mounting holes are 109 x 105 mm apart
 
-i have a P1S, PLA, PETG-CF and TPU for AMS. still need to confirm the hardened nozzle for PETG-CF. screw sizes and quantities are in [HARDWARE.md](HARDWARE.md)
+i have a P1S, PLA, PETG-CF and TPU for AMS. the P1S has a 0.4 mm hardened-steel nozzle. screw sizes and quantities are in [HARDWARE.md](HARDWARE.md)
+
+the first slicer pass caught the right base-bar ledges and the roofs over the slots in the feet. the right bars now print upside down, and the feet use supports. the other plates sliced without warnings
 
 ## build week
 
