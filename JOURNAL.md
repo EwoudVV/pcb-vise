@@ -10,7 +10,7 @@
 
 | Week | Tier | Hours logged | Entries |
 | --- | --- | --- | --- |
-| Week 2 | Tier 2 | 11h | 4 |
+| Week 2 | Tier 2 | 12h | 5 |
 
 ## Contents
 
@@ -18,6 +18,7 @@
 2. [2026-10-14 – Devlog 02: clamps, pivots and base](#2026-10-14-devlog-02-clamps-pivots-and-base)
 3. [2026-10-15 – Devlog 03: board clearance and ballast](#2026-10-15-devlog-03-board-clearance-and-ballast)
 4. [2026-10-15 – Devlog 04: hardware and print setup](#2026-10-15-devlog-04-hardware-and-print-setup)
+5. [2026-10-15 – Devlog 05: general-purpose grips](#2026-10-15-devlog-05-general-purpose-grips)
 
 ## Design
 
@@ -118,3 +119,25 @@ updated the CAD, STEP, STLs and hardware list. the fastener and steel carts have
 ![06-tpu](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/6gi99sjgqS9PS6AP7HOtnbXmi9NgjIY3/d59e0ab1449b3fa78ea88ec9fefef5f37541492c655b3f0fdf318675fb76437a.png)
 
 ![bolt-depot-shipping](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/6gi99sjgqS9PS6AP7HOtnbXmi9NgjIY3/805201f0c8228ef274172fde3ed34557be9cbe04fa8d272591cc309c28e0c762.jpg)
+
+### 2026-10-15 – Devlog 05: general-purpose grips
+
+**1h**
+
+Devlog 05: general-purpose grips
+
+went back to the ordinary edge grips instead of spending more time on the ESC adapter. the old fixed-width slots weren't a good fit for different board thicknesses
+
+changed them to V grooves and raised the board to leave more space underneath. the first version still had wide rails under the edges, so narrowed those and changed the grip screws to M3 x 20
+
+checked small and large boards, with thicknesses from 0.8 to 2.4 mm. also checked space for components on both sides, rotation and access underneath with a small straight tool shape. the grips need about 3 mm of clear board edge. their actual holding force still needs a printed test
+
+made this the default CAD model, STEP file and README view. the ESC adapters now have their own assembly, print plate and extra hardware list. updated the grip drawing and assembly instructions too
+
+the changed plates slice without warnings. reopened the saved projects and checked them again, then updated the Half Life description and cover to show the general-purpose version. nothing printed yet
+
+![mechanisms-preview](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/6gi99sjgqS9PS6AP7HOtnbXmi9NgjIY3/cc2ba198030c330af72cd1c2faba12148cb294493607d095e11d608f16067a45.png)
+
+![jaw-detail](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/6gi99sjgqS9PS6AP7HOtnbXmi9NgjIY3/45a913ac6a3208c0a92e1ce808bafeb3c3dfb82c60f6a439c20971921a484b01.png)
+
+![edge-grip-drawing](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/6gi99sjgqS9PS6AP7HOtnbXmi9NgjIY3/df71ccaa30a0a8a17202c6708c6f17f97bab226f80d2684537a5343549f6c8f3.png)
