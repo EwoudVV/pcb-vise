@@ -36,9 +36,6 @@ planning on PETG-CF for the rigid parts, TPU for AMS for the soft parts, and PLA
 - [hardware list](HARDWARE.md) and [CSV](hardware.csv)
 - [assembly instructions](ASSEMBLY.md), still being worked on
 
-## still to finish
+## next
 
-- finish the submission journal and media
-- print the fit samples during build week
-
-printing and testing come during build week
+submitted for CAD week on October 15. next are the fit samples, assembly and holding tests during build week

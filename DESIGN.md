@@ -22,9 +22,7 @@ the feet are 240 mm long, with four supplied-cut steel blocks in TPU liners. the
 
 the P1S has a 0.4 mm hardened-steel nozzle. the saved plates use PETG-CF for the rigid parts and TPU for AMS for the soft parts. the feet use supports, and the right base bars print top face down
 
-## before submission
-
-- finish the submission journal and upload the cart screenshots and closing reel
+CAD week submitted October 15 with the cart screenshots and closing reel. waiting for review
 
 ## build week
 
