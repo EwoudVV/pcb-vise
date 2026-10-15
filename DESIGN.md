@@ -18,15 +18,13 @@ these are CAD checks. print a grip pair and try actual boards during build week 
 
 the jaws slide on two 8 x 250 mm rods and lock with M4 screws. M6 bolts and knobs hold the angle
 
-the feet are 240 mm long, with four steel blocks in TPU liners. the tipping calculation gives a margin just over 1.5 for a 5 N sideways force at 225 mm above a flat bench, with all feet touching. sliding still needs testing
+the feet are 240 mm long, with four supplied-cut steel blocks in TPU liners. the pockets allow the supplier's extra cut length. the tipping calculation gives a margin just over 1.5 for a 5 N sideways force at 225 mm above a flat bench, with all feet touching. sliding still needs testing
 
 the P1S has a 0.4 mm hardened-steel nozzle. the saved plates use PETG-CF for the rigid parts and TPU for AMS for the soft parts. the feet use supports, and the right base bars print top face down
 
 ## before submission
 
-- finish the rod shipping quote and arrange the steel cuts
-- review the drawings and build-week fit samples
-- fill out the website BOM, take the final cart screenshots and make the closing reel
+- finish the submission journal and upload the cart screenshots and closing reel
 
 ## build week
 

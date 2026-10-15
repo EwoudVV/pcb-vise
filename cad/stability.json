@@ -20,7 +20,13 @@
     "minimum_density_g_cm3": 7.75,
     "nominal_total_mass_kg": 1.3587069600000001,
     "credited_total_mass_kg": 1.321233795,
-    "allowed_in_plane_shift_mm": 2
+    "allowed_in_plane_shift_mm": 3,
+    "supplier_cut_length_in": 2.362,
+    "supplier_cut_tolerance_in": [
+      0,
+      0.125
+    ],
+    "maximum_cut_length_mm": 63.1698
   },
   "rods": {
     "quantity": 2,
@@ -34,11 +40,11 @@
     "half_width_mm": 178.5
   },
   "results": {
-    "fore_aft_restoring_Nm": 1.7050303733978127,
-    "side_restoring_Nm": 2.6184934777702265,
+    "fore_aft_restoring_Nm": 1.692651516652513,
+    "side_restoring_Nm": 2.61018550753103,
     "applied_Nm": 1.125,
-    "fore_aft_margin": 1.515582554131389,
-    "side_margin": 2.327549758017979,
+    "fore_aft_margin": 1.5045791259133448,
+    "side_margin": 2.320164895583138,
     "minimum_static_friction_coefficient_for_5N": 0.33702585379417915
   },
   "ignored_positive_mass": [

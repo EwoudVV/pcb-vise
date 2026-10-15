@@ -312,7 +312,7 @@
     "printed": true,
     "valid": true,
     "solids": 1,
-    "volume_mm3": 229979.812
+    "volume_mm3": 226299.812
   },
   {
     "name": "LeftFrontBallastLid",
@@ -702,7 +702,7 @@
     "printed": true,
     "valid": true,
     "solids": 1,
-    "volume_mm3": 229979.812
+    "volume_mm3": 226299.812
   },
   {
     "name": "RightFrontBallastLid",
@@ -1677,7 +1677,7 @@
     "printed": true,
     "valid": true,
     "solids": 1,
-    "volume_mm3": 8595.45
+    "volume_mm3": 8934.0
   },
   {
     "name": "LeftFrontBallast",
@@ -1707,7 +1707,7 @@
     "printed": true,
     "valid": true,
     "solids": 1,
-    "volume_mm3": 8595.45
+    "volume_mm3": 8934.0
   },
   {
     "name": "LeftRearBallast",
@@ -1737,7 +1737,7 @@
     "printed": true,
     "valid": true,
     "solids": 1,
-    "volume_mm3": 8595.45
+    "volume_mm3": 8934.0
   },
   {
     "name": "RightFrontBallast",
@@ -1767,7 +1767,7 @@
     "printed": true,
     "valid": true,
     "solids": 1,
-    "volume_mm3": 8595.45
+    "volume_mm3": 8934.0
   },
   {
     "name": "RightRearBallast",

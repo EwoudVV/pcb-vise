@@ -6,7 +6,7 @@ i'm making a pcb vise for soldering. the jaws slide to fit different boards, and
 
 ![pcb vise](exports/mechanisms-preview.png)
 
-this is for Half Life CAD week. still designing it, nothing printed yet
+this is for Half Life CAD week. nothing printed yet
 
 ## how it works
 
@@ -38,8 +38,7 @@ planning on PETG-CF for the rigid parts, TPU for AMS for the soft parts, and PLA
 
 ## still to finish
 
-- review the final drawings and build-week fit samples
-- finish the shipping quotes and arrange cutting the steel
-- finish the submission BOM and media
+- finish the submission journal and media
+- print the fit samples during build week
 
 printing and testing come during build week

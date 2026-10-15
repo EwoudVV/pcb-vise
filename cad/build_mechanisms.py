@@ -82,7 +82,7 @@ def build(esc=False):
     # Foot pockets, removable ballast covers and matching upright fasteners.
     for side,x in [('Left',-147),('Right',147)]:
         blank=box(side+'FootBlank',(x-29,-120,4),(58,240,26));tools=[]
-        for i,y in enumerate((-108,43)):tools.append(box(side+'BallastPocket'+str(i),(x-23,y,10),(46,65,22)))
+        for i,y in enumerate((-109,42)):tools.append(box(side+'BallastPocket'+str(i),(x-23,y,10),(46,67,22)))
         for y in (-18,18):
             slotx=x-.2 if x<0 else x-29.2
             tools.append(box(side+'BarSeat',(slotx,y-8.2,7.8),(29.4,16.4,8.4)))
@@ -209,8 +209,8 @@ def build(esc=False):
     finish(plate,rotor,'reference PCB','board')
     for side,x in [('Left',-147),('Right',147)]:
         for label,y in [('Front',-75.5),('Rear',75.5)]:
-            tray=box(side+label+'LinerBlank',(x-22,y-31.5,10),(44,63,19.45))
-            cavity=box(side+label+'LinerCavity',(x-19.5,y-30.5,10.4),(39,61,20))
+            tray=box(side+label+'LinerBlank',(x-22,y-33,10),(44,66,19.45))
+            cavity=box(side+label+'LinerCavity',(x-19.5,y-32,10.4),(39,64,20))
             finish(cut(side+label+'BallastLiner',tray,[cavity]),base,'TPU for AMS','soft')
             block=box(side+label+'Ballast',(x-19.05,y-30,10.4),(38.1,60,19.05))
             finish(block,base,'steel','steel')

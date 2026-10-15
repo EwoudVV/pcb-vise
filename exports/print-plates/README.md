@@ -6,15 +6,15 @@ start with the fit samples and one grip pair during build week before printing t
 
 | Plate | Material | Time estimate | Filament |
 | --- | --- | ---: | ---: |
-| [01-feet](01-feet.3mf) | PETG-CF | 9h 40m | 298 g |
+| [01-feet](01-feet.3mf) | PETG-CF | 9h 36m | 296 g |
 | [02-uprights](02-uprights.3mf) | PETG-CF | 3h 46m | 111 g |
 | [03-base-bars](03-base-bars.3mf) | PETG-CF | 1h 57m | 57 g |
 | [04-jaws-and-pivots](04-jaws-and-pivots.3mf) | PETG-CF | 7h 22m | 215 g |
 | [05-lids](05-lids.3mf) | PETG-CF | 1h 27m | 48 g |
-| [06-tpu](06-tpu.3mf) | TPU for AMS | 2h 48m | 116 g |
+| [06-tpu](06-tpu.3mf) | TPU for AMS | 2h 48m | 118 g |
 | [07-optional-esc-adapters](07-optional-esc-adapters.3mf) | PETG-CF | 0h 46m | 16 g |
 
-about 729 g of PETG-CF and 116 g of TPU for the general-purpose vise. the ESC adapters add about 16 g of PETG-CF. these are slicer estimates, before fit samples or failed prints
+about 727 g of PETG-CF and 118 g of TPU for the general-purpose vise. the ESC adapters add about 16 g of PETG-CF. these are slicer estimates, before fit samples or failed prints
 
 the rigid parts use 0.20 mm layers, four walls and 30% gyroid infill. the TPU parts use three walls and 15% infill
 

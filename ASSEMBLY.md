@@ -21,7 +21,7 @@ the STLs in `exports/parts/` are oriented for printing and fit the P1S bed. keep
 1. join each pair of base bars at the middle lap with two M4 x 12 screws and M4 nuts. the screw heads are on top and the nuts sit underneath. assemble this before fitting the feet
 2. place the bars in the recesses on the inner halves of the feet. the upright's inner screws pass through the bars too
 3. load the M5 nuts through the openings under the feet. fit each upright with four M5 x 35 screws and M5 washers
-4. load the M3 lid nuts from underneath. fit the four TPU liners and steel blocks, then fit the four lids with eight M3 x 30 screws
+4. load the M3 lid nuts from underneath. deburr the four supplied-cut steel blocks and check that each is no longer than 63.17 mm. fit them in the TPU liners, then fit the four lids with eight M3 x 30 screws
 5. slide the TPU shoes onto the ends of the feet. the lips hook over the base, and the recess inside leaves room for the lid screw
 
 tighten by hand and keep the base joints flat. don't force a nut or rod into a hole that's too small

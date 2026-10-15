@@ -2,7 +2,7 @@
 
 this is the hardware for the general-purpose vise with TPU edge grips. the optional ESC attachment has its own [extra parts list](hardware-esc.csv)
 
-the standard parts come to $39.08 before shipping, tax and cutting the steel. individual links and prices are in [hardware.csv](hardware.csv). `Quantity` is what goes in the vise; `Buy_quantity` is what to order
+the standard parts come to $46.31, or about $70.13 delivered with estimated tax. individual links and prices are in [hardware.csv](hardware.csv). `Quantity` is what goes in the vise; `Buy_quantity` is what to order
 
 | Part | Qty |
 | --- | ---: |
@@ -43,9 +43,9 @@ the M5 pockets are only 4.4 mm deep, so a 4.7 mm tall nut won't work. check the 
 
 ## ballast
 
-four pieces of 3/4 x 1 1/2 inch steel bar, each cut to 60 mm. that makes each block 38.1 x 60 x 19.05 mm, about 1.36 kg for all four. they sit in printed TPU liners under the lids. deburr the cut edges before putting them in
+order four supplied-cut pieces of 3/4 x 1 1/2 inch 1018 steel bar, each 2.362 inches long (about 60 mm). the [custom-cut quote](https://www.onlinemetals.com/en/buy/carbon-steel/0-75-x-1-5-carbon-steel-rectangle-bar-1018-cold-finish/pid/9720) is $5.98 each
 
-a 12 inch length of [1018 bar](https://www.onlinemetals.com/en/buy/carbon-steel/0-75-x-1-5-carbon-steel-rectangle-bar-1018-cold-finish/pid/9720) was $19.60 on October 15. there's enough length for four blocks and the saw cuts. cutting still needs arranging
+the supplier allows +1/8 inch and no undersize on the cut length. the liners now have 64 mm inside length and the foot pockets are 67 mm long, so pieces up to 63.17 mm fit. file any sharp burrs before fitting them. no sawing is planned
 
 [ballast drawing](drawings/feet-and-ballast.svg) · [base calculation notes](DESIGN.md)
 
@@ -53,16 +53,19 @@ a 12 inch length of [1018 bar](https://www.onlinemetals.com/en/buy/carbon-steel/
 
 - [DIN 934 nut dimensions](https://www.westfieldfasteners.co.uk/Standards/Nut_Hex_M.html)
 - [DIN 912 cap screw dimensions](https://www.boltking.co.uk/din-912)
-- [guide rods](https://www.servocity.com/8mm-x-250mm-stainless-steel-precision-shafting/)
+- [guide rod pair](https://www.walmart.com/ip/5057851455)
 
 ## prices checked October 15
 
 | Order | Parts | Shipping | Tax | Total |
 | --- | ---: | ---: | ---: | ---: |
-| Bolt Depot standard fasteners | $7.90 | re-quote | re-quote | pending |
-| Online Metals steel bar | $19.60 | $13.59 | $1.23 | $34.42 |
-| ServoCity rods | $11.58 | pending | pending | pending |
+| Bolt Depot standard fasteners | $7.90 | $7.33 | $0.49 | $15.72 |
+| Online Metals, four cut weights | $23.92 | $13.59 | $1.50 | $39.01 |
+| Walmart / Tasharina, rod pair | $14.49 | free | $0.91 estimated | $15.40 estimated |
+| Total | $46.31 | $20.92 | $2.90 | $70.13 |
 
-the earlier fastener cart was for the ESC version and needs updating to this list. shipping estimates use 01776. the steel quote is for a residential address. the rod store didn't finish loading, so its cart and shipping still need confirming. the listed rods are $5.79 each
+quotes use 01776 and residential shipping. Walmart shows free shipping but calculates tax at checkout; the $0.91 estimate uses [Massachusetts' 6.25% rate](https://www.mass.gov/guides/sales-and-use-tax)
 
-this uses the filament i already have. cutting the four steel blocks isn't included above. nothing ordered yet
+one $5.98 weight is self-funded on the Half Life website, making its funding list $64.15. all four weights are required and are included in this file, the CSV and the cart
+
+PETG-CF and TPU for AMS are already owned. the coupons tried did not lower the quoted total. nothing ordered yet

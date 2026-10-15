@@ -1,0 +1,31 @@
+{
+  "supplier_nominal_cut_in": 2.362,
+  "supplier_cut_tolerance_in": [
+    0,
+    0.125
+  ],
+  "liner_inside_length_mm": 64,
+  "foot_pocket_length_mm": 67,
+  "checks": [
+    {
+      "part": "LeftFrontBallast",
+      "maximum_length_mm": 63.1698,
+      "contacts": []
+    },
+    {
+      "part": "LeftRearBallast",
+      "maximum_length_mm": 63.1698,
+      "contacts": []
+    },
+    {
+      "part": "RightFrontBallast",
+      "maximum_length_mm": 63.1698,
+      "contacts": []
+    },
+    {
+      "part": "RightRearBallast",
+      "maximum_length_mm": 63.1698,
+      "contacts": []
+    }
+  ]
+}
