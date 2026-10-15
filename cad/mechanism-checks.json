@@ -120,8 +120,8 @@
   ],
   "step": {
     "valid": true,
-    "solids": 117,
-    "expected": 117
+    "solids": 105,
+    "expected": 105
   },
   "stl_exports": [
     {
@@ -427,10 +427,10 @@
       "part": "FixedMountingAdapter",
       "orientation": "as modelled, underside down",
       "material": "PETG-CF",
-      "variant": "main",
+      "variant": "esc",
       "bounds_mm": [
         13.0,
-        120.0,
+        88.0,
         22.2
       ],
       "closed_mesh": true,
@@ -438,13 +438,13 @@
     },
     {
       "part": "FixedEdgeGrip",
-      "orientation": "jaw mounting face down",
+      "orientation": "rail underside down; V groove slopes upward",
       "material": "TPU for AMS",
-      "variant": "alternative",
+      "variant": "main",
       "bounds_mm": [
-        19.0,
+        6.0,
         62.0,
-        13.0
+        28.0
       ],
       "closed_mesh": true,
       "fits_p1s": true
@@ -466,10 +466,10 @@
       "part": "SlidingMountingAdapter",
       "orientation": "as modelled, underside down",
       "material": "PETG-CF",
-      "variant": "main",
+      "variant": "esc",
       "bounds_mm": [
         13.0,
-        120.0,
+        88.0,
         22.2
       ],
       "closed_mesh": true,
@@ -477,13 +477,13 @@
     },
     {
       "part": "SlidingEdgeGrip",
-      "orientation": "jaw mounting face down",
+      "orientation": "rail underside down; V groove slopes upward",
       "material": "TPU for AMS",
-      "variant": "alternative",
+      "variant": "main",
       "bounds_mm": [
-        19.0,
+        6.0,
         62.0,
-        13.0
+        28.0
       ],
       "closed_mesh": true,
       "fits_p1s": true

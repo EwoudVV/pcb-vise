@@ -54,7 +54,8 @@
       "nut_pocket_AF_mm": 5.8,
       "nut_max_AF_mm": 5.5,
       "nominal_full_nut_engagement": true,
-      "nominal_pocket_clearance_AF_mm": 0.3
+      "nominal_pocket_clearance_AF_mm": 0.3,
+      "configuration": "optional ESC attachment"
     },
     {
       "joint": "adapter attachment",
@@ -65,7 +66,8 @@
       "nut_pocket_AF_mm": 5.8,
       "nut_max_AF_mm": 5.5,
       "nominal_full_nut_engagement": true,
-      "nominal_pocket_clearance_AF_mm": 0.3
+      "nominal_pocket_clearance_AF_mm": 0.3,
+      "configuration": "optional ESC attachment"
     },
     {
       "joint": "pivot knobs",
@@ -77,13 +79,25 @@
       "nut_max_AF_mm": 10,
       "nominal_full_nut_engagement": true,
       "nominal_pocket_clearance_AF_mm": 0.3
+    },
+    {
+      "joint": "general-purpose edge grips",
+      "screw": "M3 x 20",
+      "stack_mm": 15.8,
+      "nut_height_mm": 2.4,
+      "tip_past_nut_mm": 4.2,
+      "nut_pocket_AF_mm": 5.8,
+      "nut_max_AF_mm": 5.5,
+      "nominal_full_nut_engagement": true,
+      "nominal_pocket_clearance_AF_mm": 0.3
     }
   ],
   "limits": [
     "Nominal dimensions, before print tolerances or clamp compression.",
     "Physical fit samples are still needed."
   ],
-  "washer_contact_review": [
+  "configuration": "general-purpose, with ESC-only joints marked",
+  "optional_ESC_washer_contact_review": [
     {
       "part": "FixedBoardWasher0",
       "OD_mm": 7,

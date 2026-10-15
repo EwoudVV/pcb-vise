@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650">
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto-start-reverse"><path d="M0 0L7 3.5L0 7z" fill="#43535b"/></marker></defs>
+<rect width="1000" height="650" fill="white"/>
+<g font-family="Arial,sans-serif" fill="#243943"><text x="50" y="48" font-size="26">PCB vise: edge grip</text><text x="50" y="78" font-size="15">Dimensions in mm. TPU for AMS. Print fit still to be checked.</text>
+<text x="90" y="127" font-size="19">Cross-section</text>
+<g transform="translate(105 480) scale(12 -12)" stroke="#243943" stroke-width=".14">
+<path d="M0 0H6V8H5V20L2 23L5 26V28H0Z" fill="#edb66d"/>
+<rect x="2.8" y="22.2" width="15" height="1.6" fill="#6c9b84"/>
+<path d="M-1 6H7" stroke-dasharray=".5 .4" fill="none"/>
+</g>
+<text x="230" y="190" font-size="15">Example: 1.6 mm board</text>
+<path d="M222 196L180 208" stroke="#43535b" marker-end="url(#arrow)" fill="none"/>
+<path d="M80 144V480M105 144H70M105 480H70" stroke="#43535b" fill="none"/>
+<path d="M80 148V476" stroke="#43535b" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="62" y="320" transform="rotate(-90 62 320)" font-size="14">28 overall</text>
+<path d="M105 505H177M105 480V515M177 480V515" stroke="#43535b" fill="none"/>
+<path d="M109 505H173" stroke="#43535b" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="121" y="530" font-size="14">6 rail</text>
+<text x="230" y="270" font-size="15">90° V groove</text><path d="M224 265L150 216" stroke="#43535b" marker-end="url(#arrow)" fill="none"/>
+<text x="230" y="320" font-size="15">2 mm behind groove tip</text>
+<text x="230" y="350" font-size="15">Board centre 23 above underside</text>
+<text x="230" y="380" font-size="15">M3 x 20 grip screws</text>
+<text x="560" y="127" font-size="19">Mounting face</text>
+<rect x="510" y="244" width="434" height="196" fill="#edb66d" stroke="#243943" stroke-width="1.6"/>
+<circle cx="587" cy="398" r="11.9" fill="white" stroke="#243943" stroke-width="1.6"/><circle cx="867" cy="398" r="11.9" fill="white" stroke="#243943" stroke-width="1.6"/>
+<path d="M510 279H944M510 314H944" stroke="#43535b" stroke-dasharray="6 5" fill="none"/>
+<path d="M510 225H944M510 244V214M944 244V214" stroke="#43535b" fill="none"/>
+<path d="M514 225H940" stroke="#43535b" marker-start="url(#arrow)" marker-end="url(#arrow)"/><text x="715" y="215" font-size="14">62</text>
+<path d="M587 468H867M587 410V478M867 410V478" stroke="#43535b" fill="none"/>
+<path d="M591 468H863" stroke="#43535b" marker-start="url(#arrow)" marker-end="url(#arrow)"/><text x="716" y="490" font-size="14">40</text>
+<text x="540" y="525" font-size="15">2 x Ø3.4 through holes, centres 6 above underside</text>
+<text x="50" y="585" font-size="16">Board range: 0.8-2.4 thick. Leave 3 mm clear along the held edges.</text>
+<text x="50" y="614" font-size="15">Left and right grips mirror each other. Slide the jaws gently into contact, then lock them.</text>
+</g></svg>

@@ -3,14 +3,8 @@ import json
 import FreeCAD as App
 ROOT=Path(__file__).resolve().parents[1]
 doc=App.openDocument(str(ROOT/'cad/pcb-vise.FCStd'))
-doc.Dimensions.AdapterLift=0
-doc.recompute()
 rows=json.loads((ROOT/'cad/parts.json').read_text())
-visible=[]
-for row in rows:
-    name=row['name']
-    omit=any(token in name for token in ('MountingAdapter','BoardScrew','BoardNut','BoardWasher'))
-    if not omit:visible.append(name)
+visible={r['name'] for r in rows if r['variant']=='main'}
 for obj in doc.Objects:
     if obj.TypeId!='App::Part':obj.ViewObject.Visibility=obj.Name in visible
 for name in ('Base','RotatingFrame','FixedJaw','SlidingJaw'):doc.getObject(name).ViewObject.Visibility=True

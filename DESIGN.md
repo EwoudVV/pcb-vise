@@ -1,33 +1,33 @@
 # design notes
 
-this week is for the design. printing and testing come during build week
+this is a general-purpose pcb vise. the main model uses edge grips. the ESC mounting-hole adapters are an optional attachment
 
-## where it's at
+## board range
 
-the jaws slide on two 8 x 250 mm rods. M4 screws lock them in place, and the knobs at either end lock the rotation. the base has steel weights inside and TPU covers on the feet
+- rectangular boards 30-160 mm wide and 30-160 mm deep
+- board thicknesses from 0.8 to 2.4 mm
+- about 3 mm of clear edge where the grips touch
 
-there are two sets of grips: mounting-hole adapters for my ESC, and slotted TPU grips for other boards. the ESC adapters lift it 10 mm, with the XT60 facing the unused length of the rods. some connector models were missing, so i left extra space around them. the real connector sizes and cable bends still need checking
+the V grooves centre the board as the jaws move in. the grips lift it 10 mm above the pivot axis. narrower mounting rails and M3 x 20 screws leave more room underneath
 
-the feet are now 240 mm long. four steel blocks sit in TPU liners inside them. the tipping calculation gives a margin just over 1.5 for a 5 N sideways force at 225 mm above a flat bench, with all four feet touching. it only counts the steel blocks and rods. whether the feet slide still needs testing
+checked space for components up to 25 mm above and 10 mm below the board, inside that 3 mm edge margin. the underside tip-access check starts 9 mm in from the held edges. connectors that stick beyond the outline still need checking against the particular board
 
-the current model is [pcb-vise.FCStd](cad/pcb-vise.FCStd). the [edge-grip version](cad/pcb-vise-edge-grips.FCStd) holds boards at the original height. files with `layout` in the name are from the first version
+these are CAD checks. print a grip pair and try actual boards during build week before treating the range as proven
+
+## base and printing
+
+the jaws slide on two 8 x 250 mm rods and lock with M4 screws. M6 bolts and knobs hold the angle
+
+the feet are 240 mm long, with four steel blocks in TPU liners. the tipping calculation gives a margin just over 1.5 for a 5 N sideways force at 225 mm above a flat bench, with all feet touching. sliding still needs testing
+
+the P1S has a 0.4 mm hardened-steel nozzle. the saved plates use PETG-CF for the rigid parts and TPU for AMS for the soft parts. the feet use supports, and the right base bars print top face down
 
 ## before submission
 
-- confirm the remaining connector sizes and cable clearance
-- finish the remaining fit drawings and connector details
-- confirm rod shipping and arrange the steel cuts
-- use the saved plate layouts for the build-week fit samples
-- fill out the website BOM, take cart screenshots and make the closing reel
-
-## sizes and materials
-
-aiming for boards 30-160 mm wide and up to 160 mm across the rotating frame. the model uses a 1.6 mm board. the ESC mounting holes are 109 x 105 mm apart
-
-i have a P1S, PLA, PETG-CF and TPU for AMS. the P1S has a 0.4 mm hardened-steel nozzle. screw sizes and quantities are in [HARDWARE.md](HARDWARE.md)
-
-the first slicer pass caught the right base-bar ledges and the roofs over the slots in the feet. the right bars now print upside down, and the feet use supports. the other plates sliced without warnings
+- finish the rod shipping quote and arrange the steel cuts
+- review the drawings and build-week fit samples
+- fill out the website BOM, take the final cart screenshots and make the closing reel
 
 ## build week
 
-start with the rod and nut fit samples, then one jaw clamp. adjust the fits before printing everything. once it's assembled, check that the pivot holds, the feet stay on, and the base doesn't slide or tip with a board in it
+start with the rod and nut samples, one jaw clamp and the edge grips. try thin and thick boards, then adjust the fits before printing everything. check the pivot lock, feet and base stability with a board fitted

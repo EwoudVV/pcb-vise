@@ -11,6 +11,7 @@ the STLs in `exports/parts/` are oriented for printing and fit the P1S bed. keep
 - use TPU for AMS for the friction rings, shoes, ballast liners and edge grips
 - print the jaws with the adapter face down, so the rod bores run vertically
 - print the carriers with their inner flat face down, and the pivot knobs with the washer face down
+- print the TPU grips with the rail underside down
 - print TPU shoes on their closed toe end so the retaining lips build vertically
 - the right-hand base bars print top face down so their lap ledges rest on the plate
 - the feet need supports under the bar-seat roofs. remove these through the side openings and clean out the nut pockets before assembly
@@ -35,14 +36,21 @@ tighten by hand and keep the base joints flat. don't force a nut or rod into a h
 
 the rod seats leave 0.5 mm at each end. check the rod lengths before assembly. if the rods move end to end, add shims in the seats rather than bending the uprights inward
 
-## jaws and adapters
+## jaws and edge grips
 
-1. fit an M4 nut under each jaw clamp and an M4 x 50 screw with washer from above. the horizontal slit lets the jaw close around the front guide rod. an Allen key is used for this lock
-2. insert the four M3 adapter nuts through the outer faces of the jaw bodies
-3. fit either the raised ESC adapters or the TPU edge grips with four M3 x 25 screws, inserted from between the jaws. the edge grips hold the board lower; there is a separate CAD file for that setup
-4. attach the inserts before closing the jaws around a small board. at the minimum opening, there is not enough room between them to insert a long driver
-5. for the ESC, point the XT60 toward the unused rod length. put four M3 nuts under the adapter rails, then fit four M3 x 25 screws and small washers through the board holes. check that the heads and washers clear the components
-6. for the TPU edge grips, slide the jaws into light contact with the board and lock their positions. the nominal grooves are 2.2 mm high for a 1.6 mm board. don't squeeze or bend the PCB
+1. fit an M4 nut under each jaw clamp and an M4 x 50 screw with washer from above
+2. insert the four M3 grip nuts through the outer faces of the jaw bodies
+3. attach the TPU grips with four M3 x 20 screws, inserted from between the jaws. do this before moving the jaws together around a small board
+4. seat the board edges in the V grooves, then bring the jaws into light contact and lock them with an Allen key. don't force the jaws in or bend the board
+5. check that the grips miss the components and solder joints. leave about 3 mm clear along the held edges
+
+start with a plain board. try 0.8, 1.6 and 2.4 mm boards when checking the printed grips. the grooves are intended to accept these thicknesses without swapping inserts
+
+## optional ESC attachment
+
+swap the TPU grips for the rigid mounting-hole adapters and use four M3 x 25 screws to attach them. the general-purpose grips' shorter screws are not used here
+
+point the XT60 toward the unused rod length. put four M3 nuts under the adapter rails, then fit four M3 x 25 screws and small washers through the board holes. check that the heads and washers clear the components
 
 ## tests before use
 

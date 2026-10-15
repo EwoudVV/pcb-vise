@@ -8,19 +8,22 @@ OUT=ROOT/'exports'
 DOC='PCB_Vise_Mechanisms'
 COLORS={'frame':(0.16,0.25,0.30),'jaw':(0.12,0.55,0.57),'soft':(0.94,0.58,0.19),'steel':(0.70,0.73,0.76),'board':(0.15,0.40,0.24)}
 
-def build():
-    if DOC in App.listDocuments(): App.closeDocument(DOC)
-    d=App.newDocument(DOC)
+def build(esc=False):
+    docname=DOC+('_ESC' if esc else '')
+    stem='pcb-vise-esc' if esc else 'pcb-vise'
+    if docname in App.listDocuments(): App.closeDocument(docname)
+    d=App.newDocument(docname)
     dims=d.addObject('App::FeaturePython','Dimensions')
-    for k,v in {'BoardWidth':116,'BoardDepth':112,'BoardThickness':1.6,'AxisHeight':125,'GuideBore':8.3,'AdapterLift':10}.items():
+    for k,v in {'BoardWidth':116 if esc else 100,'BoardDepth':112 if esc else 80,'BoardThickness':1.6,'AxisHeight':125,'GuideBore':8.3,'AdapterLift':10,'GripHeight':10}.items():
         dims.addProperty('App::PropertyLength',k,'Dimensions');setattr(dims,k,v)
+    dims.addProperty('App::PropertyString','Configuration','Notes');dims.Configuration='ESC adapters' if esc else 'edge grips'
     dims.addProperty('App::PropertyAngle','Tilt','Dimensions');dims.Tilt=20
     dims.addProperty('App::PropertyString','Status','Notes');dims.Status='Prototype for fit testing. Not load-tested.'
     base=d.addObject('App::Part','Base')
     rotor=d.addObject('App::Part','RotatingFrame');rotor.Placement=App.Placement(App.Vector(0,0,125),App.Rotation(App.Vector(1,0,0),20))
     rotor.setExpression('Placement.Base.z','Dimensions.AxisHeight');rotor.setExpression('Placement.Rotation.Angle','Dimensions.Tilt')
     fixed=d.addObject('App::Part','FixedJaw');rotor.addObject(fixed)
-    sliding=d.addObject('App::Part','SlidingJaw');rotor.addObject(sliding);sliding.setExpression('Placement.Base.x','Dimensions.BoardWidth - 116 mm')
+    sliding=d.addObject('App::Part','SlidingJaw');rotor.addObject(sliding);sliding.setExpression('Placement.Base.x','Dimensions.BoardWidth - 116 mm' if esc else 'Dimensions.BoardWidth - 116 mm + Dimensions.BoardThickness')
     alternatives=d.addObject('App::Part','AlternativeGrips');alternatives.Placement=rotor.Placement
     manifest=[];hw=[]
     def setval(o,k,v):
@@ -51,6 +54,8 @@ def build():
         t=tools[0] if len(tools)==1 else fuse(n+'Cutters',tools)
         o=d.addObject('Part::Cut',n);o.Base=obj;o.Tool=t;return o
     def finish(o,g,material='PETG-CF',color='frame',variant='main'):
+        if not esc and any(t in o.Name for t in ('MountingAdapter','BoardScrew','BoardNut','BoardWasher')):variant='esc'
+        if 'EdgeGrip' in o.Name:variant='alternative' if esc else 'main'
         g.addObject(o)
         o.addProperty('App::PropertyString','Material','Part');o.Material=material
         if App.GuiUp:o.ViewObject.ShapeColor=COLORS[color];o.ViewObject.LineColor=(.08,.1,.12)
@@ -179,23 +184,29 @@ def build():
             washer(side+'BoardWasher'+str(i),g,(holex,y,'Dimensions.AdapterLift + 0.8 mm'),3,7,.5)
             nut(side+'BoardNut'+str(i),g,(holex,y,-12.7),3)
         for i,y in enumerate((-20,20)):
-            if sign<0:screw(side+'AdapterScrew'+str(i),g,(-106,y,-7),3,25,'x')
+            if sign<0:screw(side+'AdapterScrew'+str(i),g,(-106 if esc else -108,y,-7),3,25 if esc else 20,'x')
             else:
                 # A negative-axis screw is expressed as a rotated native bolt.
-                bolt=screw(side+'AdapterScrew'+str(i),g,(-38,-y,-7),3,25,'x')
+                bolt=screw(side+'AdapterScrew'+str(i),g,(-38 if esc else -40,-y,-7),3,25 if esc else 20,'x')
                 bolt.Placement=App.Placement(App.Vector(0,0,0),App.Rotation(App.Vector(0,0,1),180))
             nut(side+'AdapterNut'+str(i),g,(-103.8 if sign<0 else 33.4,y,-7),3,'x')
-        # Exchange the rigid ESC adapter for this complete TPU edge insert.
-        rail=box(side+'EdgeRail',(ax,-31,-13),(13,62,8))
-        lipx=-94 if sign<0 else 22
-        lip=box(side+'EdgeLip',(lipx,-31,-5),(4,62,11))
-        groovex=-92 if sign<0 else 21.8
-        groove=box(side+'EdgeGroove',(groovex,-32,-1.1),(2.2,64,2.2))
-        cuts=[groove]+[cyl(side+'EdgeMountHole',(ax-1,y,-7),1.7,15,'x') for y in (-20,20)]
+        # The same V grooves seat thin and thick boards when the jaws are moved in.
+        gripx=-94 if sign<0 else 20
+        rail=box(side+'EdgeRail',(gripx,-31,-13),(6,62,8))
+        lipx=-94 if sign<0 else 21
+        lip=box(side+'EdgeLip',(lipx,-31,-5),(5,62,'Dimensions.GripHeight + 10 mm'))
+        tipx=-92 if sign<0 else 24
+        groove=box(side+'EdgeGroove',(tipx,-32,'Dimensions.GripHeight'),(6,64,6))
+        groove.Placement.Rotation=App.Rotation(App.Vector(0,1,0),45 if sign<0 else 225)
+        cuts=[groove]+[cyl(side+'EdgeMountHole',(gripx-1,y,-7),1.7,8,'x') for y in (-20,20)]
         finish(cut(side+'EdgeGrip',fuse(side+'EdgeBlank',[rail,lip]),cuts),g,'TPU for AMS','soft','alternative')
-    plate=box('BoardEnvelopeBlank',(-92,'-Dimensions.BoardDepth / 2','Dimensions.AdapterLift - Dimensions.BoardThickness / 2'),('Dimensions.BoardWidth','Dimensions.BoardDepth','Dimensions.BoardThickness'))
-    holes=[cyl('BoardHole',(x,y,'Dimensions.AdapterLift - 2 mm'),1.6,4) for x in (-88.5,'Dimensions.BoardWidth - 95.5 mm') for y in ('-Dimensions.BoardDepth / 2 + 3.5 mm','Dimensions.BoardDepth / 2 - 3.5 mm')]
-    finish(cut('BoardEnvelope',plate,holes),rotor,'reference PCB','board')
+    boardx=-92 if esc else '-92 mm + Dimensions.BoardThickness / 2'
+    height='Dimensions.AdapterLift' if esc else 'Dimensions.GripHeight'
+    plate=box('BoardEnvelopeBlank' if esc else 'BoardEnvelope',(boardx,'-Dimensions.BoardDepth / 2',height+' - Dimensions.BoardThickness / 2'),('Dimensions.BoardWidth','Dimensions.BoardDepth','Dimensions.BoardThickness'))
+    if esc:
+        holes=[cyl('BoardHole',(x,y,'Dimensions.AdapterLift - 2 mm'),1.6,4) for x in (-88.5,'Dimensions.BoardWidth - 95.5 mm') for y in ('-Dimensions.BoardDepth / 2 + 3.5 mm','Dimensions.BoardDepth / 2 - 3.5 mm')]
+        plate=cut('BoardEnvelope',plate,holes)
+    finish(plate,rotor,'reference PCB','board')
     for side,x in [('Left',-147),('Right',147)]:
         for label,y in [('Front',-75.5),('Rear',75.5)]:
             tray=box(side+label+'LinerBlank',(x-22,y-31.5,10),(44,63,19.45))
@@ -215,10 +226,10 @@ def build():
     for r in manifest:
         o=d.getObject(r['name']);r['valid']=o.Shape.isValid();r['solids']=len(o.Shape.Solids);r['volume_mm3']=round(o.Shape.Volume,3)
         if not r['valid'] or r['solids']!=1:raise ValueError(r)
-    d.saveAs(str(ROOT/'cad/pcb-vise.FCStd'))
-    (ROOT/'cad/parts.json').write_text(json.dumps(manifest,indent=2)+'\n')
+    d.saveAs(str(ROOT/'cad'/(stem+'.FCStd')))
+    (ROOT/'cad'/('parts-esc.json' if esc else 'parts.json')).write_text(json.dumps(manifest,indent=2)+'\n')
     (ROOT/'work/mechanisms-20261014/hardware.json').write_text(json.dumps(hw,indent=2)+'\n')
-    if App.GuiUp:Gui.activeDocument().activeView().saveImage(str(OUT/'mechanisms-preview.png'),1800,1300,'White')
+    if App.GuiUp and not esc:Gui.activeDocument().activeView().saveImage(str(OUT/'mechanisms-preview.png'),1800,1300,'White')
     return d,manifest,hw
 
 if __name__=='__main__':

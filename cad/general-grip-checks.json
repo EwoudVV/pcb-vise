@@ -1,0 +1,447 @@
+{
+  "component_edge_clearance_mm": 3,
+  "top_component_height_mm": 25,
+  "bottom_component_height_mm": 10,
+  "straight_tip_probe_diameter_mm": 4,
+  "straight_tip_probe_length_mm": 35,
+  "tip_access_inset_from_gripped_edges_mm": 9,
+  "cases": [
+    {
+      "width_mm": 30,
+      "depth_mm": 30,
+      "thickness_mm": 0.8,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 72.079
+    },
+    {
+      "width_mm": 30,
+      "depth_mm": 30,
+      "thickness_mm": 1.6,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 71.7
+    },
+    {
+      "width_mm": 30,
+      "depth_mm": 30,
+      "thickness_mm": 2.4,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 71.321
+    },
+    {
+      "width_mm": 30,
+      "depth_mm": 80,
+      "thickness_mm": 0.8,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 58.251
+    },
+    {
+      "width_mm": 30,
+      "depth_mm": 80,
+      "thickness_mm": 1.6,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 57.973
+    },
+    {
+      "width_mm": 30,
+      "depth_mm": 80,
+      "thickness_mm": 2.4,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 57.694
+    },
+    {
+      "width_mm": 30,
+      "depth_mm": 160,
+      "thickness_mm": 0.8,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 24.71
+    },
+    {
+      "width_mm": 30,
+      "depth_mm": 160,
+      "thickness_mm": 1.6,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 24.542
+    },
+    {
+      "width_mm": 30,
+      "depth_mm": 160,
+      "thickness_mm": 2.4,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 24.373
+    },
+    {
+      "width_mm": 60,
+      "depth_mm": 30,
+      "thickness_mm": 0.8,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 72.079
+    },
+    {
+      "width_mm": 60,
+      "depth_mm": 30,
+      "thickness_mm": 1.6,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 71.7
+    },
+    {
+      "width_mm": 60,
+      "depth_mm": 30,
+      "thickness_mm": 2.4,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 71.321
+    },
+    {
+      "width_mm": 60,
+      "depth_mm": 80,
+      "thickness_mm": 0.8,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 58.251
+    },
+    {
+      "width_mm": 60,
+      "depth_mm": 80,
+      "thickness_mm": 1.6,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 57.973
+    },
+    {
+      "width_mm": 60,
+      "depth_mm": 80,
+      "thickness_mm": 2.4,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 57.694
+    },
+    {
+      "width_mm": 60,
+      "depth_mm": 160,
+      "thickness_mm": 0.8,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 24.71
+    },
+    {
+      "width_mm": 60,
+      "depth_mm": 160,
+      "thickness_mm": 1.6,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 24.542
+    },
+    {
+      "width_mm": 60,
+      "depth_mm": 160,
+      "thickness_mm": 2.4,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 24.373
+    },
+    {
+      "width_mm": 100,
+      "depth_mm": 30,
+      "thickness_mm": 0.8,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 68.603
+    },
+    {
+      "width_mm": 100,
+      "depth_mm": 30,
+      "thickness_mm": 1.6,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 68.224
+    },
+    {
+      "width_mm": 100,
+      "depth_mm": 30,
+      "thickness_mm": 2.4,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 67.844
+    },
+    {
+      "width_mm": 100,
+      "depth_mm": 80,
+      "thickness_mm": 0.8,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 54.774
+    },
+    {
+      "width_mm": 100,
+      "depth_mm": 80,
+      "thickness_mm": 1.6,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 54.497
+    },
+    {
+      "width_mm": 100,
+      "depth_mm": 80,
+      "thickness_mm": 2.4,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 54.218
+    },
+    {
+      "width_mm": 100,
+      "depth_mm": 160,
+      "thickness_mm": 0.8,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 21.234
+    },
+    {
+      "width_mm": 100,
+      "depth_mm": 160,
+      "thickness_mm": 1.6,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 21.066
+    },
+    {
+      "width_mm": 100,
+      "depth_mm": 160,
+      "thickness_mm": 2.4,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 20.897
+    },
+    {
+      "width_mm": 160,
+      "depth_mm": 30,
+      "thickness_mm": 0.8,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 68.603
+    },
+    {
+      "width_mm": 160,
+      "depth_mm": 30,
+      "thickness_mm": 1.6,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 68.224
+    },
+    {
+      "width_mm": 160,
+      "depth_mm": 30,
+      "thickness_mm": 2.4,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 67.844
+    },
+    {
+      "width_mm": 160,
+      "depth_mm": 80,
+      "thickness_mm": 0.8,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 54.774
+    },
+    {
+      "width_mm": 160,
+      "depth_mm": 80,
+      "thickness_mm": 1.6,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 54.497
+    },
+    {
+      "width_mm": 160,
+      "depth_mm": 80,
+      "thickness_mm": 2.4,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 54.218
+    },
+    {
+      "width_mm": 160,
+      "depth_mm": 160,
+      "thickness_mm": 0.8,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 21.234
+    },
+    {
+      "width_mm": 160,
+      "depth_mm": 160,
+      "thickness_mm": 1.6,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 21.066
+    },
+    {
+      "width_mm": 160,
+      "depth_mm": 160,
+      "thickness_mm": 2.4,
+      "contacts": [],
+      "grip_contact_distances_mm": [
+        0.0,
+        0.0
+      ],
+      "tip_access_contacts": [],
+      "fixed_base_rotation_gap_lower_bound_mm": 20.897
+    }
+  ],
+  "limits": [
+    "Rectangular board envelopes, not every possible component or connector.",
+    "V-groove contact is nominal geometry; printed grip and holding force need testing.",
+    "The probe does not represent an iron handle or angled access."
+  ]
+}

@@ -12,14 +12,13 @@ this is for Half Life CAD week. still designing it, nothing printed yet
 
 the jaws slide on two steel rods and lock with an Allen key. the knobs on either side hold the frame at the angle i want
 
-the grips bolt on, so i can swap between:
+the TPU grips have V-shaped grooves, so the same pair can hold different board thicknesses. they sit above the jaws to leave more room for components and soldering underneath
 
-- an adapter that uses the four mounting holes on my ESC
-- TPU grips with slots for the edges of other boards
+![edge grip](exports/jaw-detail.png)
 
-my ESC has too much stuff near the edges for normal grips. the adapters use its mounting holes and raise it a little to leave room for the connectors
+the current design is for rectangular boards 30-160 mm wide, 30-160 mm deep and 0.8-2.4 mm thick. leave about 3 mm clear along the edges being held. the fit and holding force still need checking with printed parts
 
-![jaw and mounting adapter](exports/jaw-detail.png)
+there's also an optional mounting-hole adapter for my ESC. it swaps onto the same jaws when a board's edges are too crowded for grips
 
 steel blocks inside the feet add weight to the base. TPU covers go on the ends for grip. the base screws together from smaller pieces that fit on my P1S
 
@@ -30,17 +29,16 @@ planning on PETG-CF for the rigid parts, TPU for AMS for the soft parts, and PLA
 ## files
 
 - [FreeCAD model](cad/pcb-vise.FCStd)
-- [edge-grip assembly](cad/pcb-vise-edge-grips.FCStd)
+- [optional ESC assembly](cad/pcb-vise-esc.FCStd)
 - [STEP file](exports/pcb-vise.step)
 - [STL files](exports/parts/) and [Bambu Studio plates](exports/print-plates/)
-- [adapter drawing](drawings/esc-adapter.svg) and [feet and ballast drawing](drawings/feet-and-ballast.svg)
+- [grip drawing](drawings/edge-grip.svg) and [feet and ballast drawing](drawings/feet-and-ballast.svg)
 - [hardware list](HARDWARE.md) and [CSV](hardware.csv)
 - [assembly instructions](ASSEMBLY.md), still being worked on
 
 ## still to finish
 
-- check the remaining connector sizes and room for cables
-- finish the fits and drawings
+- review the final drawings and build-week fit samples
 - finish the shipping quotes and arrange cutting the steel
 - finish the submission BOM and media
 

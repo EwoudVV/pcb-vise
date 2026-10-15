@@ -12,7 +12,10 @@ def overlaps(a,b):
     return a.common(b).Volume
 
 def check(doc,parts):
-    dim=doc.getObject('Dimensions');main=[r for r in parts if r['variant']=='main'];moving=[r for r in main if r['group']!='Base'];fixed=[r for r in main if r['group']=='Base']
+    dim=doc.getObject('Dimensions');original_width=dim.BoardWidth.Value;main=[r for r in parts if r['variant']=='main'];moving=[r for r in main if r['group']!='Base'];fixed=[r for r in main if r['group']=='Base']
+    esc=getattr(dim,'Configuration','')=='ESC adapters'
+    stem='pcb-vise-esc' if esc else 'pcb-vise'
+    report_path=ROOT/'cad'/('mechanism-checks-esc.json' if esc else 'mechanism-checks.json')
     printed=[r for r in main if r['printed']]
     report={'status':'prototype; physical fit, friction and load tests pending','solids':len(parts),'default_geometry':all(r['valid'] and r['solids']==1 for r in parts)}
     # All intended components are included; cutters and intermediate features are not parts.
@@ -26,7 +29,7 @@ def check(doc,parts):
     print('assembly intersections',hits,flush=True)
     (ROOT/'work/mechanisms-20261014/contacts.json').write_text(json.dumps(hits,indent=2))
     if hits:
-        (ROOT/'cad/mechanism-checks.json').write_text(json.dumps(report,indent=2)+'\n')
+        report_path.write_text(json.dumps(report,indent=2)+'\n')
         raise AssertionError('Assembly intersections remain')
     rotation=[];fs={r['name']:shapes[r['name']] for r in fixed}
     for ang in range(0,360,15):
@@ -50,14 +53,14 @@ def check(doc,parts):
                 if v>.02:collisions.append([a,b,round(v,3)])
         variants.append({'width_mm':width,'board_width_mm':round(doc.getObject('BoardEnvelope').Shape.BoundBox.XLength,3),'intersections':collisions})
     report['board_widths']=variants
-    dim.BoardWidth=116;dim.Tilt=20;doc.recompute()
+    dim.BoardWidth=original_width;dim.Tilt=20;doc.recompute()
     doc.save()
     # Export finished component shapes in assembly coordinates.
     ex=App.newDocument('MechanismExport');objects=[]
     for r in main:
         o=ex.addObject('Part::Feature',r['name']);o.Shape=world(doc.getObject(r['name']));objects.append(o)
-    ex.recompute();Part.export(objects,str(ROOT/'exports/pcb-vise.step'))
-    roundtrip=Part.Shape();roundtrip.read(str(ROOT/'exports/pcb-vise.step'))
+    ex.recompute();Part.export(objects,str(ROOT/'exports'/(stem+'.step')))
+    roundtrip=Part.Shape();roundtrip.read(str(ROOT/'exports'/(stem+'.step')))
     report['step']={'valid':roundtrip.isValid(),'solids':len(roundtrip.Solids),'expected':len(main)}
     App.closeDocument(ex.Name)
     exports=[]
@@ -76,8 +79,7 @@ def check(doc,parts):
             angle=90 if name.startswith('Left') else -90
             s.rotate(App.Vector(),App.Vector(0,1,0),angle);orientation='washer face down; nut entry up'
         elif 'EdgeGrip' in name:
-            angle=-90 if name.startswith('Fixed') else 90
-            s.rotate(App.Vector(),App.Vector(0,1,0),angle);orientation='jaw mounting face down'
+            orientation='rail underside down; V groove slopes upward'
         elif name.startswith('Right') and name.endswith('Tie'):
             s.rotate(App.Vector(),App.Vector(1,0,0),180);orientation='top face down; lap ledge on bed'
         elif 'FrictionRing' in name:
@@ -92,7 +94,7 @@ def check(doc,parts):
         exports.append({'part':r['name'],'orientation':orientation,'material':r['material'],'variant':r['variant'],'bounds_mm':[round(bb.XLength,2),round(bb.YLength,2),round(bb.ZLength,2)],'closed_mesh':mesh.isSolid(),'fits_p1s':max(bb.XLength,bb.YLength,bb.ZLength)<=256})
     report['stl_exports']=exports
     report['limits']=['Threads are simplified as clearance cylinders.','Rotation uses 15 degree samples and an unpopulated PCB envelope.','Split clamps and TPU feet require print and load tests.','Ballast mass and grip friction are not established.']
-    (ROOT/'cad/mechanism-checks.json').write_text(json.dumps(report,indent=2)+'\n')
+    report_path.write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({'intersections':len(hits),'rotation_contacts':sum(len(x['intersections']) for x in rotation),'step':report['step'],'printed_parts':len(exports),'stl_pass':all(e['closed_mesh'] and e['fits_p1s'] for e in exports)}),flush=True)
     assert report['step']['valid'] and report['step']['solids']==report['step']['expected']
     assert not any(r['intersections'] for r in rotation+variants)

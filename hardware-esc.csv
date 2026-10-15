@@ -1,0 +1,4 @@
+Part,Quantity,References,Source,Price_status,Vendor,SKU,Buy_quantity,Unit_USD,Line_USD
+"M3 nut DIN 934, 5.5 mm AF x 2.4 mm",4,FixedBoardNut0; FixedBoardNut1; SlidingBoardNut0; SlidingBoardNut1,https://boltdepot.com/Product-Details?product=4773,extra nuts for optional ESC board mounts,Bolt Depot,4773,4,0.07,0.28
+M3 x 25 socket cap screw DIN 912,8,FixedBoardScrew0; FixedBoardScrew1; FixedAdapterScrew0; FixedAdapterScrew1; SlidingBoardScrew0; SlidingBoardScrew1; SlidingAdapterScrew0; SlidingAdapterScrew1,https://boltdepot.com/Product-Details?product=6384,optional ESC attachment only,Bolt Depot,6384,8,0.08,0.64
+"M3 washer, 7 mm OD x 0.5 mm",4,FixedBoardWasher0; FixedBoardWasher1; SlidingBoardWasher0; SlidingBoardWasher1,https://boltdepot.com/Product-Details?product=4513,optional ESC attachment only,Bolt Depot,4513,4,0.05,0.2

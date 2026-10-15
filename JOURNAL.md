@@ -6,7 +6,7 @@
 > [!NOTE]
 > This devlog is mirrored from [Half Life](https://halflife.hackclub.com). Editing it here will not change the platform's copy, and the next sync overwrites this file.
 
-> a rotating pcb holder for soldering, with adjustable jaws, replaceable grips and a freestanding base. starting with an adapter for my esc, then making grips for other boards too.
+> a rotating pcb vise for soldering, with sliding jaws and replaceable V-groove grips for different board sizes and thicknesses. the frame flips over to reach both sides. also has an optional mounting-hole attachment for boards with crowded edges.
 
 | Week | Tier | Hours logged | Entries |
 | --- | --- | --- | --- |

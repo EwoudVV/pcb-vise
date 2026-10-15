@@ -1233,7 +1233,7 @@
     "name": "FixedMountingAdapter",
     "group": "FixedJaw",
     "material": "PETG-CF",
-    "variant": "main",
+    "variant": "esc",
     "color": [
       0.94,
       0.58,
@@ -1242,13 +1242,13 @@
     "printed": true,
     "valid": true,
     "solids": 1,
-    "volume_mm3": 12638.137
+    "volume_mm3": 9310.137
   },
   {
     "name": "FixedBoardScrew0",
     "group": "FixedJaw",
     "material": "steel",
-    "variant": "main",
+    "variant": "esc",
     "color": [
       0.7,
       0.73,
@@ -1263,7 +1263,7 @@
     "name": "FixedBoardWasher0",
     "group": "FixedJaw",
     "material": "steel",
-    "variant": "main",
+    "variant": "esc",
     "color": [
       0.7,
       0.73,
@@ -1278,7 +1278,7 @@
     "name": "FixedBoardNut0",
     "group": "FixedJaw",
     "material": "steel",
-    "variant": "main",
+    "variant": "esc",
     "color": [
       0.7,
       0.73,
@@ -1293,7 +1293,7 @@
     "name": "FixedBoardScrew1",
     "group": "FixedJaw",
     "material": "steel",
-    "variant": "main",
+    "variant": "esc",
     "color": [
       0.7,
       0.73,
@@ -1308,7 +1308,7 @@
     "name": "FixedBoardWasher1",
     "group": "FixedJaw",
     "material": "steel",
-    "variant": "main",
+    "variant": "esc",
     "color": [
       0.7,
       0.73,
@@ -1323,7 +1323,7 @@
     "name": "FixedBoardNut1",
     "group": "FixedJaw",
     "material": "steel",
-    "variant": "main",
+    "variant": "esc",
     "color": [
       0.7,
       0.73,
@@ -1347,7 +1347,7 @@
     "printed": false,
     "valid": true,
     "solids": 1,
-    "volume_mm3": 252.731
+    "volume_mm3": 217.388
   },
   {
     "name": "FixedAdapterNut0",
@@ -1377,7 +1377,7 @@
     "printed": false,
     "valid": true,
     "solids": 1,
-    "volume_mm3": 252.731
+    "volume_mm3": 217.388
   },
   {
     "name": "FixedAdapterNut1",
@@ -1398,7 +1398,7 @@
     "name": "FixedEdgeGrip",
     "group": "FixedJaw",
     "material": "TPU for AMS",
-    "variant": "alternative",
+    "variant": "main",
     "color": [
       0.94,
       0.58,
@@ -1407,7 +1407,7 @@
     "printed": true,
     "valid": true,
     "solids": 1,
-    "volume_mm3": 8667.141
+    "volume_mm3": 8509.05
   },
   {
     "name": "SlidingJawBody",
@@ -1473,7 +1473,7 @@
     "name": "SlidingMountingAdapter",
     "group": "SlidingJaw",
     "material": "PETG-CF",
-    "variant": "main",
+    "variant": "esc",
     "color": [
       0.94,
       0.58,
@@ -1482,13 +1482,13 @@
     "printed": true,
     "valid": true,
     "solids": 1,
-    "volume_mm3": 12638.137
+    "volume_mm3": 9310.137
   },
   {
     "name": "SlidingBoardScrew0",
     "group": "SlidingJaw",
     "material": "steel",
-    "variant": "main",
+    "variant": "esc",
     "color": [
       0.7,
       0.73,
@@ -1503,7 +1503,7 @@
     "name": "SlidingBoardWasher0",
     "group": "SlidingJaw",
     "material": "steel",
-    "variant": "main",
+    "variant": "esc",
     "color": [
       0.7,
       0.73,
@@ -1518,7 +1518,7 @@
     "name": "SlidingBoardNut0",
     "group": "SlidingJaw",
     "material": "steel",
-    "variant": "main",
+    "variant": "esc",
     "color": [
       0.7,
       0.73,
@@ -1533,7 +1533,7 @@
     "name": "SlidingBoardScrew1",
     "group": "SlidingJaw",
     "material": "steel",
-    "variant": "main",
+    "variant": "esc",
     "color": [
       0.7,
       0.73,
@@ -1548,7 +1548,7 @@
     "name": "SlidingBoardWasher1",
     "group": "SlidingJaw",
     "material": "steel",
-    "variant": "main",
+    "variant": "esc",
     "color": [
       0.7,
       0.73,
@@ -1563,7 +1563,7 @@
     "name": "SlidingBoardNut1",
     "group": "SlidingJaw",
     "material": "steel",
-    "variant": "main",
+    "variant": "esc",
     "color": [
       0.7,
       0.73,
@@ -1587,7 +1587,7 @@
     "printed": false,
     "valid": true,
     "solids": 1,
-    "volume_mm3": 252.731
+    "volume_mm3": 217.388
   },
   {
     "name": "SlidingAdapterNut0",
@@ -1617,7 +1617,7 @@
     "printed": false,
     "valid": true,
     "solids": 1,
-    "volume_mm3": 252.731
+    "volume_mm3": 217.388
   },
   {
     "name": "SlidingAdapterNut1",
@@ -1638,7 +1638,7 @@
     "name": "SlidingEdgeGrip",
     "group": "SlidingJaw",
     "material": "TPU for AMS",
-    "variant": "alternative",
+    "variant": "main",
     "color": [
       0.94,
       0.58,
@@ -1647,7 +1647,7 @@
     "printed": true,
     "valid": true,
     "solids": 1,
-    "volume_mm3": 8667.141
+    "volume_mm3": 8509.05
   },
   {
     "name": "BoardEnvelope",
@@ -1662,7 +1662,7 @@
     "printed": false,
     "valid": true,
     "solids": 1,
-    "volume_mm3": 20735.728
+    "volume_mm3": 12800.0
   },
   {
     "name": "LeftFrontBallastLiner",
